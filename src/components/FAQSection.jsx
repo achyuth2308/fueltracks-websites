@@ -13,7 +13,7 @@ export default function FAQSection() {
       <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-sky-100/60 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-50/70 rounded-full blur-3xl translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <AnimatedSection>
@@ -44,8 +44,8 @@ export default function FAQSection() {
                 <AnimatedSection key={i} delay={0.05 * i}>
                   <div
                     className={`rounded-2xl border transition-all duration-300 ${isOpen
-                        ? "bg-sky-50 border-primary-200 shadow-lg shadow-primary-500/5"
-                        : "bg-white border-sky-100 hover:border-sky-200"
+                      ? "bg-sky-50 border-primary-200 shadow-lg shadow-primary-500/5"
+                      : "bg-white border-sky-100 hover:border-sky-200"
                       }`}
                   >
                     <button

@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-primary-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header — left-aligned for asymmetry */}
         <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
           <div>

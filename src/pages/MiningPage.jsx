@@ -10,16 +10,16 @@ export default function MiningPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-40 bg-surface-900 overflow-hidden border-b border-surface-800">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/mining/hero_truck.png" 
-            alt="Mining Truck at Dawn" 
+          <img
+            src="/images/mining/hero_truck.png"
+            alt="Mining Truck at Dawn"
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface-900/95 via-surface-900/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-transparent to-transparent opacity-90" />
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="relative z-10 w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl">
             <AnimatedSection>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-sm">
@@ -32,7 +32,7 @@ export default function MiningPage() {
               <p className="mt-6 text-xl text-surface-400 leading-relaxed max-w-2xl">
                 Open-pit mines demand equipment that doesn't quit. FuelTracks provides military-grade telemetry and fleet intelligence designed specifically for excavators, dump trucks, and heavy mining vehicles.
               </p>
-              
+
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-amber-500 text-surface-900 font-bold hover:bg-amber-400 transition-colors shadow-lg shadow-amber-500/20">
                   Discuss Mining Solutions
@@ -46,14 +46,14 @@ export default function MiningPage() {
 
       {/* Fleet Intelligence Section */}
       <section className="py-24 bg-surface-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="right" className="lg:order-2">
               <div className="relative rounded-[2.5rem] bg-white p-2 shadow-2xl shadow-surface-900/10 border border-surface-200">
                 <div className="rounded-[calc(2.5rem-0.5rem)] overflow-hidden">
-                  <img 
-                    src="/images/mining/dashboard.png" 
-                    alt="Mining Analytics Dashboard" 
+                  <img
+                    src="/images/mining/dashboard.png"
+                    alt="Mining Analytics Dashboard"
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function MiningPage() {
                 </div>
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection direction="left" className="lg:order-1">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 leading-tight">
@@ -73,7 +73,7 @@ export default function MiningPage() {
                 <p className="mt-6 text-lg text-surface-600 leading-relaxed">
                   In remote mining zones, data is your only link to operational efficiency. The FuelTracks Cloud Suite turns raw sensor data into actionable intelligence, ensuring maximum uptime and zero fuel pilferage.
                 </p>
-                
+
                 <div className="mt-10 space-y-8">
                   {[
                     { title: "Predictive Maintenance", desc: "Monitor engine hours, harsh idling, and temperature spikes to schedule maintenance before catastrophic machinery failure occurs.", icon: Settings },
@@ -102,15 +102,15 @@ export default function MiningPage() {
 
       {/* Rugged Hardware Integration */}
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-               <div className="relative rounded-[2.5rem] bg-surface-50 p-8 sm:p-12 border border-surface-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-transparent rounded-[2.5rem]" />
-                  <img src="/images/mining/sensor.png" alt="Rugged Fuel Sensor" className="w-full h-auto object-contain drop-shadow-2xl relative z-10 rounded-2xl" />
-               </div>
+              <div className="relative rounded-[2.5rem] bg-surface-50 p-8 sm:p-12 border border-surface-200">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-transparent rounded-[2.5rem]" />
+                <img src="/images/mining/sensor.png" alt="Rugged Fuel Sensor" className="w-full h-auto object-contain drop-shadow-2xl relative z-10 rounded-2xl" />
+              </div>
             </AnimatedSection>
-            
+
             <AnimatedSection direction="right">
               <div>
                 <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-100 border border-surface-200 text-surface-700 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
@@ -122,7 +122,7 @@ export default function MiningPage() {
                 <p className="mt-6 text-lg text-surface-600 leading-relaxed">
                   Mining environments destroy standard tracking devices in weeks due to extreme vibrations, dust, and temperature fluctuations. Our industrial-grade hardware is over-engineered to outlast the vehicles they are installed on.
                 </p>
-                
+
                 <ul className="mt-8 space-y-4">
                   {[
                     "IP67 sealed capacitive fuel sensors unaffected by deep dust.",
@@ -138,7 +138,7 @@ export default function MiningPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="mt-10">
                   <Link to="/products/capacitive-fuel-sensor" className="inline-flex items-center gap-2 text-amber-600 font-bold hover:text-amber-700 transition-colors">
                     Explore our Capacitive Fuel Sensors
@@ -154,14 +154,14 @@ export default function MiningPage() {
       {/* Mining Advantages Grid */}
       <section className="py-24 bg-surface-900 text-white relative">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold">Why Top Mining Operators Choose FuelTracks</h2>
               <p className="mt-4 text-surface-400 text-lg">We don't just provide tracking; we provide absolute control over your most expensive moving assets.</p>
             </div>
           </AnimatedSection>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: HardHat, title: "Extreme Durability", desc: "Hardware tested against extreme shock, vibration, and temperature swings inherent in mining operations." },

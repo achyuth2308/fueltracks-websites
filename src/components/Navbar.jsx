@@ -25,22 +25,20 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed left-0 right-0 z-50 transition-all duration-300 flex justify-center ${
-          scrolled ? "top-4 px-4 sm:px-6 lg:px-8" : "top-0"
-        }`}
+        className={`fixed left-0 right-0 z-50 transition-all duration-300 flex justify-center ${scrolled ? "top-4 px-4 sm:px-6 lg:px-8" : "top-0"
+          }`}
       >
-        <div className={`w-full max-w-7xl mx-auto transition-all duration-500 ${
-          scrolled 
-            ? "bg-white/20 backdrop-blur-sm backdrop-brightness-110 backdrop-saturate-[2.5] backdrop-contrast-[1.15] border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1)] ring-1 ring-white/40 rounded-full px-6" 
+        <div className={`w-full w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto transition-all duration-500 ${scrolled
+            ? "bg-white/20 backdrop-blur-sm backdrop-brightness-110 backdrop-saturate-[2.5] backdrop-contrast-[1.15] border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1)] ring-1 ring-white/40 rounded-full px-6"
             : "bg-transparent px-4 sm:px-6 lg:px-8"
-        }`}>
+          }`}>
           <div className="flex items-center justify-between h-12 lg:h-14">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <img 
-                src="/images/logo.webp" 
-                alt="Fuel Tracks" 
-                className="h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" 
+              <img
+                src="/images/logo.webp"
+                alt="Fuel Tracks"
+                className="h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
               />
             </Link>
 
@@ -51,16 +49,15 @@ export default function Navbar() {
                   item.href === "/"
                     ? location.pathname === "/"
                     : location.pathname === item.href ||
-                      (item.href.startsWith("/#") && location.pathname === "/");
+                    (item.href.startsWith("/#") && location.pathname === "/");
                 return (
                   <Link
                     key={item.label}
                     to={item.href}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                      isActive
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
                         ? "bg-primary-50 text-primary-700"
                         : "text-surface-600 hover:text-surface-900 hover:bg-surface-100"
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </Link>

@@ -18,7 +18,7 @@ export default function MobileAppSection() {
       {/* Ambient orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-50 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 opacity-80 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 opacity-60 pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Phone mockup / Glass container */}
           <AnimatedSection direction="left">

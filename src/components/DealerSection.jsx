@@ -6,7 +6,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 export default function DealerSection() {
   return (
     <section className="py-20 lg:py-32 bg-sky-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl bg-gradient-to-br from-surface-900 via-surface-800 to-primary-900 p-8 sm:p-12 lg:p-16 overflow-hidden">
           {/* Background decorations */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />

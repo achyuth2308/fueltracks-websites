@@ -52,8 +52,8 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-24 pb-0 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-28 lg:pt-32 pb-12 w-full flex-1 flex items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-16 items-center w-full">
           {/* Left content */}
           <div>
             {/* Badge */}
@@ -73,7 +73,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-surface-900 leading-[1.05]"
+              className="mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-extrabold tracking-tight text-surface-900 leading-[1.05]"
             >
               {hero.title}{" "}
               <span className="text-gradient block">{hero.subtitle}</span>
@@ -84,7 +84,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-6 text-lg sm:text-xl text-surface-500 leading-relaxed max-w-lg"
+              className="mt-6 text-lg sm:text-xl text-surface-500 leading-relaxed max-w-lg xl:max-w-xl 2xl:max-w-2xl"
             >
               {hero.description}
             </motion.p>
@@ -141,7 +141,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            className="relative w-full lg:-mt-12 lg:-translate-y-4"
+            className="relative w-full max-w-md mx-auto lg:mr-0 lg:ml-auto lg:-mt-8 xl:-mt-12 xl:max-w-lg 2xl:max-w-xl"
           >
             {/* Light blue ambient glow behind the image */}
             <div className="absolute inset-0 bg-sky-300/20 rounded-3xl blur-3xl scale-110" />
@@ -202,7 +202,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="relative w-full mt-16 border-t border-sky-100 py-6 overflow-hidden bg-sky-50/70"
+        className="relative w-full mt-auto border-t border-sky-100 py-6 overflow-hidden bg-sky-50/70"
       >
         <p className="text-center text-xs font-bold text-[#D9A94D] uppercase tracking-widest mb-4">
           Services We Offer

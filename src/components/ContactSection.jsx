@@ -35,11 +35,89 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const text = `Hi Fuel Tracks,%0A%0AName: ${formData.name}%0APhone: ${formData.phone}%0AEmail: ${formData.email}%0ACity: ${formData.city}%0AProduct: ${formData.product}%0AMessage: ${formData.message}`;
-    window.open(
-      `https://wa.me/${company.whatsapp}?text=${text}`,
-      "_blank"
-    );
+
+    // Friendly validation check
+    if (!formData.name || !formData.name.trim()) {
+      alert("Please enter your Full Name.");
+      return;
+    }
+    if (!formData.phone || !formData.phone.trim()) {
+      alert("Please enter your Phone Number.");
+      return;
+    }
+    if (!formData.product) {
+      alert("Please select a Product Interested In.");
+      return;
+    }
+    if (!formData.message || !formData.message.trim()) {
+      alert("Please enter your Message / Requirement.");
+      return;
+    }
+
+    const nameVal = formData.name.trim();
+    const phoneVal = formData.phone.trim();
+    const emailVal = formData.email ? formData.email.trim() : "";
+    const cityVal = formData.city ? formData.city.trim() : "";
+    const productVal = formData.product;
+    const messageVal = formData.message.trim();
+
+    const messageTemplate = `Hello Fuel Tracks Team,
+
+I would like to enquire about one of your products.
+
+━━━━━━━━━━━━━━━━━━━━
+
+Customer Details
+
+👤 Name:
+${nameVal}
+
+📞 Phone:
+${phoneVal}
+
+📧 Email:
+${emailVal || "Not Provided"}
+
+📍 City:
+${cityVal || "Not Provided"}
+
+━━━━━━━━━━━━━━━━━━━━
+
+📦 Product Interested In:
+
+${productVal}
+
+━━━━━━━━━━━━━━━━━━━━
+
+📝 Requirement:
+
+${messageVal}
+
+━━━━━━━━━━━━━━━━━━━━
+
+Kindly provide:
+
+• Product Brochure (PDF)
+
+• Product Catalogue
+
+• Technical Specifications
+
+• Product Images
+
+• Price Quotation
+
+• Installation Details
+
+• Warranty Information
+
+Please contact me at your earliest convenience.
+
+Thank you.`;
+
+    const encodedMessage = encodeURIComponent(messageTemplate);
+    const whatsappUrl = `https://wa.me/917337433351?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const inputClass =
@@ -51,7 +129,7 @@ export default function ContactSection() {
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-50 rounded-full blur-[120px] opacity-60 pointer-events-none -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-50 rounded-full blur-[100px] opacity-40 pointer-events-none translate-y-1/3 -translate-x-1/4" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left — Contact info */}
           <div>

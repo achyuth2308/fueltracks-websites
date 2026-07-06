@@ -50,11 +50,11 @@ export default function ProductsSection() {
       {/* Ocean Slate ambient gradients */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-50 rounded-full blur-3xl pointer-events-none -translate-y-1/4 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-50/50 rounded-full blur-3xl pointer-events-none translate-y-1/4 -translate-x-1/4" />
-      
+
       {/* Subtle top border wave */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <AnimatedSection>
@@ -81,26 +81,26 @@ export default function ProductsSection() {
             <AnimatedSection key={product.name} delay={0.1 * i} className="h-full">
               {/* Double-Bezel Outer Shell */}
               <div className="group h-full p-1.5 rounded-[2rem] bg-surface-50 border border-surface-100 hover:bg-sky-50/50 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer">
-                
+
                 {/* Inner Core */}
                 <div className="h-full flex flex-col bg-white rounded-[calc(2rem-0.375rem)] overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,1)] ring-1 ring-black/[0.03]">
-                  
+
                   {/* Image Area */}
                   <div className="aspect-[4/3] bg-surface-50/30 p-6 flex items-center justify-center relative overflow-hidden group-hover:bg-sky-50/30 transition-colors duration-700">
                     <span className={`absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full border text-[10px] font-bold uppercase tracking-[0.15em] z-20 backdrop-blur-md shadow-sm ${getBadgeStyles(product.badge)}`}>
                       {product.badge}
                     </span>
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-tr from-sky-100/0 to-sky-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
+
+                    <img
+                      src={product.image}
+                      alt={product.name}
                       className="w-full h-full object-contain relative z-10 group-hover:scale-[1.08] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] mix-blend-multiply"
                       loading="lazy"
                     />
                   </div>
-                  
+
                   {/* Content Area */}
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-lg font-semibold text-surface-900 tracking-tight group-hover:text-primary-600 transition-colors duration-500">
@@ -135,13 +135,13 @@ export default function ProductsSection() {
               </p>
             </AnimatedSection>
           </div>
-          
+
           <AnimatedSection delay={0.3}>
             {/* Double-Bezel Architecture for Video */}
             <div className="max-w-4xl mx-auto p-2 sm:p-3 rounded-[2.5rem] bg-surface-50 border border-surface-200/60 shadow-2xl shadow-surface-900/10">
               <div className="relative rounded-[calc(2.5rem-0.75rem)] overflow-hidden bg-surface-900 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] ring-1 ring-black/10">
-                <VideoEmbed 
-                  youtubeId="RJ8p30zMMKw" 
+                <VideoEmbed
+                  youtubeId="RJ8p30zMMKw"
                   className="w-full aspect-video opacity-90 hover:opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]"
                 />
               </div>

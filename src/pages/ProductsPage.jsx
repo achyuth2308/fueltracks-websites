@@ -43,7 +43,7 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-center">
           <AnimatedSection>
             <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
               Our Products
@@ -67,7 +67,7 @@ export default function ProductsPage() {
 
       {/* Flagship Products — Alternating Layout */}
       <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="space-y-24 lg:space-y-32">
             {flagshipProducts.map((product, i) => (
               <div
@@ -149,7 +149,7 @@ export default function ProductsPage() {
 
       {/* Why Choose Us Banner */}
       <section className="py-16 bg-surface-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
             {[
               { icon: Shield, title: "Rugged Design", desc: "Built for Indian conditions" },
@@ -174,7 +174,7 @@ export default function ProductsPage() {
 
       {/* Standard Catalog Grid */}
       <section className="py-20 lg:py-32 bg-surface-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 space-y-24">
           {catalogCategories.map((category, index) => (
             <div key={category.id}>
               <AnimatedSection>

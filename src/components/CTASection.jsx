@@ -12,7 +12,7 @@ const highlights = [
 export default function CTASection() {
   return (
     <section className="py-20 lg:py-28 bg-sky-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="relative rounded-3xl overflow-hidden bg-white border border-[#D9A94D]/30 shadow-xl shadow-[#D9A94D]/10">
             {/* Ambient gold glows */}

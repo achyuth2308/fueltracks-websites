@@ -45,7 +45,7 @@ export default function ProductDetailsPage() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-200/40 rounded-full blur-[100px] opacity-30 pointer-events-none -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-[90px] opacity-20 pointer-events-none translate-y-1/3 -translate-x-1/4" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
            <div className="grid lg:grid-cols-2 gap-16 items-center">
              <AnimatedSection>
                <div>
@@ -80,7 +80,7 @@ export default function ProductDetailsPage() {
       {overview && (
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-[100px] pointer-events-none -z-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <AnimatedSection>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-surface-200 text-sky-600 text-[10px] font-bold uppercase tracking-[0.2em] shadow-sm mb-6">
@@ -125,7 +125,7 @@ export default function ProductDetailsPage() {
       {premium && (
       <section className="py-24 bg-surface-50 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-100/50 rounded-full blur-[100px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <AnimatedSection>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-surface-200 text-sky-600 text-[10px] font-bold uppercase tracking-[0.2em] shadow-sm mb-6">
@@ -225,7 +225,7 @@ export default function ProductDetailsPage() {
       {/* Comparison Table */}
       {comparisonTableData.headers.some(h => h.id === product.id) && (
       <section className="py-24 bg-white relative overflow-hidden border-t border-surface-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <AnimatedSection>
             <div className="overflow-x-auto pb-8 rounded-3xl border border-surface-200/60 shadow-xl shadow-surface-900/5 bg-white">
               <table className="w-full text-left border-collapse min-w-[900px]">

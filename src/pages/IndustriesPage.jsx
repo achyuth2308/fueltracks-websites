@@ -17,7 +17,7 @@ export default function IndustriesPage() {
         </div>
 
         {/* Text Overlay */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-2xl">
             <span className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-wider uppercase mb-4 shadow-xl">
               Our Reach
@@ -53,7 +53,7 @@ export default function IndustriesPage() {
       </section>
 
       <div className="bg-surface-50 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <h2 className="text-3xl md:text-5xl font-bold text-surface-900 mb-12 tracking-tight text-center lg:text-left">
             Industries we serve
           </h2>

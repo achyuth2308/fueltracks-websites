@@ -13,7 +13,7 @@ export default function AboutSection() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-50/70 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left — Image with layered depth */}
           <AnimatedSection direction="left">

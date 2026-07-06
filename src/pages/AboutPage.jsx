@@ -84,7 +84,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-[0.03]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
+        <div className="relative z-10 w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
           <div className="max-w-3xl flex flex-col items-center">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-sm font-semibold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-primary-600" />
@@ -106,7 +106,7 @@ export default function AboutPage() {
           2. WHO WE ARE — white bg, two-column
       ══════════════════════════════════════════════════════ */}
       <section className="bg-white py-14 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
 
             {/* Left */}
@@ -233,7 +233,7 @@ export default function AboutPage() {
           3. CORE VALUES — light gray bg
       ══════════════════════════════════════════════════════ */}
       <section className="bg-slate-50 py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className={`text-xs font-bold uppercase tracking-[0.2em] ${SKY} mb-4`}>
@@ -282,7 +282,7 @@ export default function AboutPage() {
             backgroundSize: "30px 30px",
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <p className={`text-xs font-bold uppercase tracking-[0.2em] text-primary-600 mb-4`}>
