@@ -4,11 +4,11 @@ import { services } from "../data/servicesData";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 lg:py-32 bg-surface-50 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]"
+    <section id="services" className="py-20 lg:py-32 bg-sky-50 relative overflow-hidden">
+      {/* Blue dot pattern */}
+      <div className="absolute inset-0 opacity-[0.025]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, black 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #1b56f5 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }}
       />
@@ -17,7 +17,7 @@ export default function ServicesSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary-50 border border-primary-200 text-primary-700 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 border border-sky-200 text-primary-700 text-xs font-semibold uppercase tracking-wider">
               Our Services
             </span>
           </AnimatedSection>

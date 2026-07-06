@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import ImagePlaceholder from "./ImagePlaceholder";
 import { Check } from "lucide-react";
@@ -13,7 +14,10 @@ export default function MobileAppSection() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-surface-50 relative overflow-hidden">
+      {/* Ambient orbs */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-50 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 opacity-80 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 opacity-60 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Phone mockup */}
@@ -26,7 +30,7 @@ export default function MobileAppSection() {
                 </div>
               </div>
 
-              {/* Floating notification */}
+              {/* Floating notification — fuel alert */}
               <div className="absolute -right-8 top-1/4 glass rounded-2xl p-3 shadow-xl animate-bounce" style={{ animationDuration: "3s" }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-red-500 flex items-center justify-center">
@@ -41,14 +45,34 @@ export default function MobileAppSection() {
                   </div>
                 </div>
               </div>
+
+              {/* Second floating card — route achievement */}
+              <motion.div
+                className="absolute -left-8 bottom-1/3 glass rounded-2xl p-3 shadow-xl border border-white/60"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-accent-500 flex items-center justify-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-surface-900">Trip Complete</p>
+                    <p className="text-xs text-surface-500">Saved 8.4L fuel today</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </AnimatedSection>
 
           {/* Content */}
           <div>
             <AnimatedSection>
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent-50 border border-accent-200 text-accent-700 text-xs font-semibold uppercase tracking-wider">
-                MOBILE APP
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 border border-sky-200 text-accent-700 text-xs font-semibold uppercase tracking-wider">
+                Mobile App
               </span>
             </AnimatedSection>
 
@@ -70,8 +94,8 @@ export default function MobileAppSection() {
               <ul className="mt-8 space-y-3">
                 {features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-accent-100 flex items-center justify-center shrink-0">
-                      <Check size={12} className="text-accent-600" />
+                    <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
+                      <Check size={12} className="text-sky-600" />
                     </div>
                     <span className="text-surface-700">{feature}</span>
                   </li>
