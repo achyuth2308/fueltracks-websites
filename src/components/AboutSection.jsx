@@ -78,7 +78,7 @@ export default function AboutSection() {
                 const Icon = metricIcons[i % metricIcons.length];
                 return (
                   <AnimatedSection key={stat.title} delay={0.2 + i * 0.1}>
-                    <div className="p-5 rounded-2xl bg-sky-50 border border-sky-100 hover:border-primary-200 hover:bg-white hover:shadow-lg hover:shadow-primary-500/6 transition-all duration-300 group card-spotlight">
+                    <div className="p-5 rounded-2xl bg-sky-50 border border-[#D9A94D]/40 hover:border-[#D9A94D] hover:bg-white hover:shadow-lg hover:shadow-[#D9A94D]/20 transition-all duration-300 group card-spotlight">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <div className="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center group-hover:bg-primary-100 transition-colors">
