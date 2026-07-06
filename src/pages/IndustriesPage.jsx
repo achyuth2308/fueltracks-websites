@@ -63,12 +63,12 @@ export default function IndustriesPage() {
               <AnimatedSection key={industry.title} delay={0.05 * i}>
                 <div className="group bg-white flex flex-col h-full shadow-sm hover:shadow-xl transition-shadow duration-300">
                   {/* Image slot */}
-                  <div className="w-full h-56 bg-surface-200 overflow-hidden relative">
+                  <div className="w-full h-56 bg-white overflow-hidden relative flex items-center justify-center border-b border-surface-100">
                     {industry.image ? (
                       <img
                         src={industry.image}
                         alt={industry.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                     ) : (
