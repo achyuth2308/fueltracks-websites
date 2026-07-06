@@ -7,6 +7,7 @@ import {
   Clock,
   ExternalLink,
 } from "lucide-react";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { company, socials } from "../data/siteConfig";
 
 export default function Footer() {
@@ -59,9 +60,20 @@ export default function Footer() {
                 {company.shortName}
               </span>
             </div>
-            <p className="text-sm text-surface-400 leading-relaxed">
+            <p className="text-sm text-surface-400 leading-relaxed mb-6">
               {company.description}
             </p>
+            <div className="flex items-center gap-4">
+              <a href={socials.instagram || "#"} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-[#D9A94D] flex items-center justify-center text-surface-400 hover:text-white transition-colors">
+                <FaInstagram size={16} />
+              </a>
+              <a href={socials.facebook || "#"} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-[#D9A94D] flex items-center justify-center text-surface-400 hover:text-white transition-colors">
+                <FaFacebook size={16} />
+              </a>
+              <a href={socials.youtube || "#"} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-[#D9A94D] flex items-center justify-center text-surface-400 hover:text-white transition-colors">
+                <FaYoutube size={16} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -78,6 +90,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.href}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-sm text-surface-400 hover:text-white transition-colors"
                   >
                     {link.label}
@@ -141,7 +154,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
-                <MapPin size={16} className="text-surface-500 mt-0.5 shrink-0" />
+                <MapPin size={16} className="text-[#D9A94D] mt-0.5 shrink-0" />
                 <a
                   href={company.mapsUrl}
                   target="_blank"
@@ -152,7 +165,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Phone size={16} className="text-surface-500 mt-0.5 shrink-0" />
+                <Phone size={16} className="text-[#D9A94D] mt-0.5 shrink-0" />
                 <div className="text-sm text-surface-400">
                   <a href={`tel:${company.phone}`} className="hover:text-white transition-colors block">
                     {company.phone}
@@ -163,7 +176,7 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <Mail size={16} className="text-surface-500 mt-0.5 shrink-0" />
+                <Mail size={16} className="text-[#D9A94D] mt-0.5 shrink-0" />
                 <a
                   href={`mailto:${company.email}`}
                   className="text-sm text-surface-400 hover:text-white transition-colors"
@@ -172,7 +185,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Clock size={16} className="text-surface-500 mt-0.5 shrink-0" />
+                <Clock size={16} className="text-[#D9A94D] mt-0.5 shrink-0" />
                 <span className="text-sm text-surface-400">{company.hours}</span>
               </li>
             </ul>

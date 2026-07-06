@@ -64,16 +64,7 @@ export default function FeaturesSection() {
                     ))}
                   </ul>
 
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 mt-8 text-primary-600 font-semibold hover:text-primary-700 transition-colors group"
-                  >
-                    Learn more
-                    <ArrowRight
-                      size={16}
-                      className="group-hover:translate-x-1 transition-transform"
-                    />
-                  </a>
+
                 </div>
               </AnimatedSection>
 

@@ -49,11 +49,11 @@ export default function IndustriesSection() {
             <AnimatedSection key={industry.title} delay={0.05 * i}>
               <div className="group relative p-6 rounded-2xl glass-dark hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 cursor-default h-full">
                 {/* Icon slot */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-4 group-hover:from-primary-500/30 group-hover:to-accent-500/30 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D9A94D]/10 to-[#DEA95A]/10 flex items-center justify-center mb-4 group-hover:from-[#D9A94D]/20 group-hover:to-[#DEA95A]/20 transition-colors border border-[#D9A94D]/20">
                   <DynamicIcon
                     name={industry.icon}
                     size={22}
-                    className="text-sky-300"
+                    className="text-[#D9A94D]"
                   />
                 </div>
 

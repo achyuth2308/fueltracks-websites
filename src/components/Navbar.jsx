@@ -70,6 +70,22 @@ export default function Navbar() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-3">
+              <a
+                href="https://admin.fueltracks.in/login"
+                target="_blank"
+                rel="noreferrer"
+                className="hidden xl:inline-flex items-center px-4 py-2 rounded-full border border-[#D9A94D] text-[#D9A94D] text-sm font-semibold hover:bg-[#D9A94D]/10 transition-colors"
+              >
+                Admin Login
+              </a>
+              <a
+                href="https://fueltracks.online/gps/public/login"
+                target="_blank"
+                rel="noreferrer"
+                className="hidden lg:inline-flex items-center px-4 py-2 rounded-full border border-[#D9A94D] text-[#D9A94D] text-sm font-semibold hover:bg-[#D9A94D]/10 transition-colors"
+              >
+                Live Login
+              </a>
               <Link
                 to={navigation.cta.href}
                 className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-surface-900 text-white text-sm font-semibold hover:bg-surface-800 transition-colors shadow-lg shadow-surface-900/20"
@@ -107,7 +123,23 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col gap-2">
+                <a
+                  href="https://admin.fueltracks.in/login"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full text-center px-5 py-3 rounded-xl border border-[#D9A94D] text-[#D9A94D] font-semibold hover:bg-[#D9A94D]/10"
+                >
+                  Admin Login
+                </a>
+                <a
+                  href="https://fueltracks.online/gps/public/login"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full text-center px-5 py-3 rounded-xl border border-[#D9A94D] text-[#D9A94D] font-semibold hover:bg-[#D9A94D]/10"
+                >
+                  Live Login
+                </a>
                 <Link
                   to={navigation.cta.href}
                   className="block w-full text-center px-5 py-3 rounded-xl bg-surface-900 text-white font-semibold"
