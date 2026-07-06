@@ -39,7 +39,7 @@ export const navigation = {
     { label: "About", href: "/about" },
     { label: "Products", href: "/products" },
     { label: "Services", href: "/#services" },
-    { label: "Industries", href: "/#industries" },
+    { label: "Industries", href: "/industries" },
     { label: "Contact", href: "/contact" },
   ],
   cta: {

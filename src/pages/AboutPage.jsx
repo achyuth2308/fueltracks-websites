@@ -76,36 +76,29 @@ export default function AboutPage() {
       {/* ══════════════════════════════════════════════════════
           1. HERO — dark navy, static (no animation)
       ══════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background: "#011f3a",
-          minHeight: "70vh",
-          display: "flex",
-          alignItems: "center",
-          paddingTop: "80px",
-          paddingBottom: "40px",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#c9a226] mb-3">
-            About Us
-          </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-sky-50 overflow-hidden flex items-center min-h-[75vh]">
+        {/* Decorative background elements to match the airy feel */}
+        <div className="absolute inset-0 z-0 opacity-50">
+          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-200/50 rounded-full blur-3xl" />
+          <div className="absolute top-40 -left-20 w-[400px] h-[400px] bg-accent-200/50 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-[0.03]" />
+        </div>
 
-          <h1
-            style={{ fontSize: "32px", lineHeight: 1.2 }}
-            className="font-extrabold text-white tracking-tight max-w-2xl"
-          >
-            A Trusted GPS &amp; Fleet Intelligence Platform
-          </h1>
-
-          <p
-            style={{ fontSize: "13px" }}
-            className="mt-4 text-slate-400 leading-relaxed max-w-xl"
-          >
-            Fuel Tracks Technologies is a Hyderabad-based IoT company committed
-            to delivering measurable value across GPS tracking, fuel monitoring,
-            RFID systems, and fleet analytics.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
+          <div className="max-w-3xl flex flex-col items-center">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-semibold uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary-600" />
+              About Us
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-surface-950 tracking-tight leading-[1.2]">
+              A Trusted GPS &amp; Fleet Intelligence Platform
+            </h1>
+            <p className="mt-6 text-base sm:text-lg text-surface-600 leading-relaxed font-medium">
+              Fuel Tracks Technologies is a Hyderabad-based IoT company committed
+              to delivering measurable value across GPS tracking, fuel monitoring,
+              RFID systems, and fleet analytics.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -278,27 +271,27 @@ export default function AboutPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          4. COMPANY TIMELINE — dark navy bg
+          4. COMPANY TIMELINE — Bright modern aesthetic
       ══════════════════════════════════════════════════════ */}
-      <section className="bg-[#011f3a] py-20 lg:py-28 overflow-hidden">
+      <section className="bg-white py-20 lg:py-28 relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle, rgba(56,189,248,0.06) 1px, transparent 1px)",
+              "radial-gradient(circle, rgba(14,165,233,0.08) 1px, transparent 1px)",
             backgroundSize: "30px 30px",
           }}
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className={`text-xs font-bold uppercase tracking-[0.2em] ${SKY} mb-4`}>
+              <p className={`text-xs font-bold uppercase tracking-[0.2em] text-primary-600 mb-4`}>
                 Our Journey
               </p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
                 Company Timeline
               </h2>
-              <p className="mt-4 text-slate-400 leading-relaxed">
+              <p className="mt-4 text-slate-500 leading-relaxed font-medium">
                 A steady progression of growth, innovation, and deepening expertise.
               </p>
             </div>
@@ -307,7 +300,7 @@ export default function AboutPage() {
           {/* vertical timeline */}
           <div className="relative max-w-2xl mx-auto">
             {/* connecting line */}
-            <div className="absolute left-5 top-2 bottom-2 w-px bg-slate-700" />
+            <div className="absolute left-5 top-2 bottom-2 w-px bg-slate-200" />
 
             <div className="space-y-6">
               {timeline.map((item, i) => (
@@ -315,18 +308,22 @@ export default function AboutPage() {
                   <div className="flex gap-6 items-start">
                     {/* dot */}
                     <div className="relative flex-shrink-0 mt-1">
-                      <div className="w-10 h-10 rounded-full border-2 border-[#c9a226] bg-[#011f3a] flex items-center justify-center z-10 relative">
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#c9a226]" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D9A94D] to-[#DEA95A] p-[2px] flex items-center justify-center z-10 relative shadow-md shadow-[#D9A94D]/20">
+                        <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
+                          <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#D9A94D] to-[#DEA95A]" />
+                        </div>
                       </div>
                     </div>
-                    {/* card */}
-                    <div className="flex-1 bg-[#062a4a] border border-slate-700 rounded-xl px-6 py-5">
-                      <p className={`text-xs font-bold uppercase tracking-[0.18em] ${SKY} mb-2`}>
-                        {item.label}
-                      </p>
-                      <p className="text-slate-300 text-sm leading-relaxed">
-                        {item.description}
-                      </p>
+                    {/* card with gradient border */}
+                    <div className="flex-1 rounded-xl bg-gradient-to-r from-[#D9A94D] to-[#DEA95A] p-[1px] shadow-sm hover:shadow-md hover:shadow-[#D9A94D]/20 transition-all duration-300">
+                      <div className="bg-white rounded-xl px-6 py-5 h-full">
+                        <p className={`text-xs font-bold uppercase tracking-[0.18em] bg-gradient-to-r from-[#D9A94D] to-[#DEA95A] bg-clip-text text-transparent mb-2`}>
+                          {item.label}
+                        </p>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -351,13 +348,13 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-slate-600 leading-relaxed text-sm sm:text-base">
               <p>
-                We believe the best IoT partnerships are built on mutual accountability, consistent device performance, 
-                and strategic alignment. Every tracking solution we deploy is crafted with long-term ROI in mind — 
+                We believe the best IoT partnerships are built on mutual accountability, consistent device performance,
+                and strategic alignment. Every tracking solution we deploy is crafted with long-term ROI in mind —
                 not just immediate hardware installation.
               </p>
               <p>
-                Our engineers are trained to approach each fleet challenge with structured thinking, technical insight, 
-                and the flexibility to adapt to the unique operating context of every client and every terrain. 
+                Our engineers are trained to approach each fleet challenge with structured thinking, technical insight,
+                and the flexibility to adapt to the unique operating context of every client and every terrain.
                 We invest in rigorous R&D because reliable technology creates great business outcomes.
               </p>
             </div>

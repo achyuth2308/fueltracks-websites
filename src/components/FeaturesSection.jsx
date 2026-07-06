@@ -33,12 +33,11 @@ export default function FeaturesSection() {
           {premiumFeatures.map((feature, i) => (
             <div
               key={feature.title}
-              className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                i % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""
+                }`}
             >
               {/* Content */}
-              <AnimatedSection 
+              <AnimatedSection
                 direction={i % 2 === 0 ? "left" : "right"}
                 className={i % 2 === 1 ? "lg:order-2" : "lg:order-1"}
               >
@@ -79,15 +78,15 @@ export default function FeaturesSection() {
               </AnimatedSection>
 
               {/* Visual — Video/Image slot */}
-              <AnimatedSection 
+              <AnimatedSection
                 direction={i % 2 === 0 ? "right" : "left"}
                 className={i % 2 === 1 ? "lg:order-1" : "lg:order-2"}
               >
                 <div className="relative">
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-surface-900/10">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title} 
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
                       className="w-full h-auto object-cover rounded-3xl"
                       loading="lazy"
                     />

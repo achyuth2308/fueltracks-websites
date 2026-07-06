@@ -31,14 +31,14 @@ export default function ProductsPage() {
               Our Products
             </span>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={0.1}>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Industrial-Grade{" "}
               <span className="text-gradient">Hardware & Software</span>
             </h1>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={0.2}>
             <p className="mt-6 text-lg sm:text-xl text-surface-400 max-w-3xl mx-auto leading-relaxed">
               From high-precision capacitive fuel sensors to AIS-140 certified GPS trackers and powerful analytics dashboards, discover the tools that power India's toughest fleets.
@@ -54,12 +54,11 @@ export default function ProductsPage() {
             {flagshipProducts.map((product, i) => (
               <div
                 key={product.id}
-                className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                  i % 2 === 1 ? "lg:direction-rtl" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""
+                  }`}
               >
                 {/* Content */}
-                <AnimatedSection 
+                <AnimatedSection
                   direction={i % 2 === 0 ? "left" : "right"}
                   className={i % 2 === 1 ? "lg:order-2" : "lg:order-1"}
                 >
@@ -106,16 +105,16 @@ export default function ProductsPage() {
                 </AnimatedSection>
 
                 {/* Visual */}
-                <AnimatedSection 
+                <AnimatedSection
                   direction={i % 2 === 0 ? "right" : "left"}
                   className={i % 2 === 1 ? "lg:order-1" : "lg:order-2"}
                 >
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/10 bg-surface-50 p-8 sm:p-12 border border-surface-200 group">
                     {/* Glow effect behind image */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary-400/10 to-accent-400/10 group-hover:scale-105 transition-transform duration-700 rounded-3xl" />
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
+                    <img
+                      src={product.image}
+                      alt={product.name}
                       className="w-full h-auto object-contain relative z-10 group-hover:scale-[1.03] transition-transform duration-500"
                       loading="lazy"
                     />
@@ -165,25 +164,25 @@ export default function ProductsPage() {
                   </p>
                 </div>
               </AnimatedSection>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.products.map((product, pIndex) => (
                   <AnimatedSection key={product.id} delay={0.1 * pIndex}>
                     <div className="group h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-surface-200 shadow-lg shadow-surface-900/5 hover:shadow-xl hover:shadow-primary-900/10 hover:border-primary-200 transition-all duration-300">
-                      
+
                       {/* Image Header */}
                       <div className="aspect-video bg-gradient-to-br from-surface-100 to-white p-6 flex items-center justify-center relative overflow-hidden border-b border-surface-100">
                         <span className="absolute top-4 left-4 inline-flex items-center px-2.5 py-1 rounded-md bg-surface-900/5 text-surface-700 text-[10px] font-bold uppercase tracking-wider z-20 backdrop-blur-md">
                           {product.badge}
                         </span>
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
+                        <img
+                          src={product.image}
+                          alt={product.name}
                           className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-500"
                           loading="lazy"
                         />
                       </div>
-                      
+
                       {/* Content */}
                       <div className="p-6 flex-1 flex flex-col">
                         <h3 className="text-lg font-bold text-surface-900 group-hover:text-primary-700 transition-colors">
@@ -192,7 +191,7 @@ export default function ProductsPage() {
                         <p className="mt-2 text-sm text-surface-500 leading-relaxed flex-1">
                           {product.description}
                         </p>
-                        
+
                         {/* Specs Grid */}
                         <div className="mt-6 pt-6 border-t border-surface-100 grid grid-cols-2 gap-3">
                           {product.specs.map((spec, i) => (

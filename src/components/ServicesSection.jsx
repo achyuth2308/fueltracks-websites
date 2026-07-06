@@ -38,8 +38,8 @@ export default function ServicesSection() {
         {/* Horizontal scrollable row */}
         <div className="mt-16 flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {services.map((service, i) => (
-            <AnimatedSection 
-              key={service.title} 
+            <AnimatedSection
+              key={service.title}
               delay={0.05 * i}
               className="snap-start shrink-0 w-[85vw] sm:w-[45vw] lg:w-[30vw] xl:w-[23vw]"
             >

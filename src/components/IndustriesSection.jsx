@@ -48,25 +48,14 @@ export default function IndustriesSection() {
           {industries.map((industry, i) => (
             <AnimatedSection key={industry.title} delay={0.05 * i}>
               <div className="group relative p-6 rounded-2xl glass-dark hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 cursor-default h-full">
-                {/* Image slot */}
-                {industry.image ? (
-                  <div className="w-full h-24 rounded-xl overflow-hidden mb-4">
-                    <img
-                      src={industry.image}
-                      alt={industry.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-4 group-hover:from-primary-500/30 group-hover:to-accent-500/30 transition-colors">
-                    <DynamicIcon
-                      name={industry.icon}
-                      size={22}
-                      className="text-sky-300"
-                    />
-                  </div>
-                )}
+                {/* Icon slot */}
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-4 group-hover:from-primary-500/30 group-hover:to-accent-500/30 transition-colors">
+                  <DynamicIcon
+                    name={industry.icon}
+                    size={22}
+                    className="text-sky-300"
+                  />
+                </div>
 
                 <h3 className="text-base font-semibold text-white group-hover:text-accent-300 transition-colors">
                   {industry.title}

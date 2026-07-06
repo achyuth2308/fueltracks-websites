@@ -43,11 +43,10 @@ export default function FAQSection() {
               return (
                 <AnimatedSection key={i} delay={0.05 * i}>
                   <div
-                    className={`rounded-2xl border transition-all duration-300 ${
-                      isOpen
+                    className={`rounded-2xl border transition-all duration-300 ${isOpen
                         ? "bg-sky-50 border-primary-200 shadow-lg shadow-primary-500/5"
                         : "bg-white border-sky-100 hover:border-sky-200"
-                    }`}
+                      }`}
                   >
                     <button
                       id={`faq-button-${i}`}
@@ -55,18 +54,16 @@ export default function FAQSection() {
                       className="w-full flex items-center justify-between p-6 text-left"
                     >
                       <span
-                        className={`text-base sm:text-lg font-semibold pr-4 transition-colors ${
-                          isOpen ? "text-primary-700" : "text-surface-900"
-                        }`}
+                        className={`text-base sm:text-lg font-semibold pr-4 transition-colors ${isOpen ? "text-primary-700" : "text-surface-900"
+                          }`}
                       >
                         {faq.question}
                       </span>
                       <motion.div
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                          isOpen ? "bg-primary-100 text-primary-600" : "bg-sky-100 text-surface-500"
-                        }`}
+                        className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${isOpen ? "bg-primary-100 text-primary-600" : "bg-sky-100 text-surface-500"
+                          }`}
                       >
                         <ChevronDown size={18} />
                       </motion.div>
