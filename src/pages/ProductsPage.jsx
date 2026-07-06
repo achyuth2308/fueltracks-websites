@@ -4,6 +4,23 @@ import CTASection from "../components/CTASection";
 import { flagshipProducts, catalogCategories } from "../data/productsData";
 import { Check, Shield, Cpu, Zap, Headphones, ArrowRight } from "lucide-react";
 
+const getBadgeStyles = (badge) => {
+  switch (badge) {
+    case 'Premium':
+    case 'Enterprise Platform':
+      return 'bg-amber-100/90 text-amber-700 border-amber-200/80 shadow-amber-900/5';
+    case 'Bestseller':
+      return 'bg-sky-100/90 text-sky-700 border-sky-200/80 shadow-sky-900/5';
+    case 'Compact':
+      return 'bg-emerald-100/90 text-emerald-700 border-emerald-200/80 shadow-emerald-900/5';
+    case 'High Accuracy':
+    case 'AIS-140 Certified':
+      return 'bg-purple-100/90 text-purple-700 border-purple-200/80 shadow-purple-900/5';
+    default:
+      return 'bg-white/90 text-surface-600 border-surface-100 shadow-sm';
+  }
+};
+
 export default function ProductsPage() {
   return (
     <>
@@ -27,7 +44,7 @@ export default function ProductsPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-surface-300 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
               Our Products
             </span>
           </AnimatedSection>
@@ -63,7 +80,7 @@ export default function ProductsPage() {
                   className={i % 2 === 1 ? "lg:order-2" : "lg:order-1"}
                 >
                   <div>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent-50 border border-accent-200 text-accent-700 text-xs font-semibold uppercase tracking-wider">
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full border text-xs font-semibold uppercase tracking-wider ${getBadgeStyles(product.badge)}`}>
                       {product.badge}
                     </span>
                     <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 leading-tight">
@@ -172,7 +189,7 @@ export default function ProductsPage() {
 
                       {/* Image Header */}
                       <div className="aspect-video bg-gradient-to-br from-surface-100 to-white p-6 flex items-center justify-center relative overflow-hidden border-b border-surface-100">
-                        <span className="absolute top-4 left-4 inline-flex items-center px-2.5 py-1 rounded-md bg-surface-900/5 text-surface-700 text-[10px] font-bold uppercase tracking-wider z-20 backdrop-blur-md">
+                        <span className={`absolute top-4 left-4 inline-flex items-center px-2.5 py-1 rounded-md border text-[10px] font-bold uppercase tracking-wider z-20 backdrop-blur-md ${getBadgeStyles(product.badge)}`}>
                           {product.badge}
                         </span>
                         <img

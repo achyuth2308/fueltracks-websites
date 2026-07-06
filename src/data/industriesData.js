@@ -53,7 +53,7 @@ export const industries = [
     subtitle: "Last-mile visibility",
     icon: "Package",
     description: "Streamline last-mile logistics with dynamic dispatching, accurate delivery timestamps, and customer visibility links to boost satisfaction and reduce operational overhead.",
-    image: "/images/dealerimage.png",
+    image: "/images/delivery.png",
   },
   {
     title: "Corporate Fleets",

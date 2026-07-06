@@ -96,7 +96,8 @@ body {
     var(--color-surface-950);
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
 }
@@ -149,22 +150,21 @@ html, body {
   background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-500) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
 }
 
-/* Blue → light-sky gradient variant */
 .text-gradient-sky {
-  background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-sky-400) 100%);
+  background: linear-gradient(135deg, var(--color-sky-500) 0%, var(--color-primary-500) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
 }
 
 .text-gradient-violet {
-  background: linear-gradient(135deg, var(--color-primary-700), var(--color-accent-500));
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-violet-500) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
 }
 
 /* ─── Custom scrollbar ─── */

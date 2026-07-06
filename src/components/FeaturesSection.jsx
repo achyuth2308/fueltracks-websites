@@ -11,7 +11,7 @@ export default function FeaturesSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 border border-sky-200 text-primary-700 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
               Premium Features
             </span>
           </AnimatedSection>
@@ -42,7 +42,7 @@ export default function FeaturesSection() {
                 className={i % 2 === 1 ? "lg:order-2" : "lg:order-1"}
               >
                 <div>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-surface-100 text-surface-600 text-xs font-semibold uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
                     {feature.badge}
                   </span>
                   <h3 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-surface-900 leading-tight">

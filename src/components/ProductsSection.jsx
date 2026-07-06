@@ -29,6 +29,21 @@ const hardwareProducts = [
   }
 ];
 
+const getBadgeStyles = (badge) => {
+  switch (badge) {
+    case 'Premium':
+      return 'bg-amber-100/90 text-amber-700 border-amber-200/80 shadow-amber-900/5';
+    case 'Bestseller':
+      return 'bg-sky-100/90 text-sky-700 border-sky-200/80 shadow-sky-900/5';
+    case 'Compact':
+      return 'bg-emerald-100/90 text-emerald-700 border-emerald-200/80 shadow-emerald-900/5';
+    case 'High Accuracy':
+      return 'bg-purple-100/90 text-purple-700 border-purple-200/80 shadow-purple-900/5';
+    default:
+      return 'bg-white/90 text-surface-600 border-surface-100 shadow-sm';
+  }
+};
+
 export default function ProductsSection() {
   return (
     <section id="products" className="py-20 lg:py-32 bg-white relative overflow-hidden">
@@ -43,7 +58,7 @@ export default function ProductsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <AnimatedSection>
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-50/50 border border-sky-100/80 text-primary-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-[10px] font-bold uppercase tracking-[0.2em]">
               Our Hardware
             </span>
           </AnimatedSection>
@@ -72,7 +87,7 @@ export default function ProductsSection() {
                   
                   {/* Image Area */}
                   <div className="aspect-[4/3] bg-surface-50/30 p-6 flex items-center justify-center relative overflow-hidden group-hover:bg-sky-50/30 transition-colors duration-700">
-                    <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full bg-white/90 border border-surface-100 text-surface-600 text-[10px] font-bold uppercase tracking-[0.15em] z-20 backdrop-blur-md shadow-sm">
+                    <span className={`absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full border text-[10px] font-bold uppercase tracking-[0.15em] z-20 backdrop-blur-md shadow-sm ${getBadgeStyles(product.badge)}`}>
                       {product.badge}
                     </span>
                     
@@ -105,7 +120,7 @@ export default function ProductsSection() {
         <div className="mt-32 lg:mt-40">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <AnimatedSection>
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-100/50 border border-surface-200 text-surface-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-[10px] font-bold uppercase tracking-[0.2em]">
                 Installation Guide
               </span>
             </AnimatedSection>

@@ -168,12 +168,12 @@ export default function HeroSection() {
 
             {/* Floating card — Live Tracking */}
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-lg rounded-2xl p-4 shadow-xl shadow-primary-500/10 border border-sky-100"
+              className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-lg rounded-2xl p-4 shadow-xl shadow-[#D9A94D]/10 border border-[#D9A94D]/40"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-accent-500 flex items-center justify-center shadow-accent-tinted">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D9A94D] to-[#DEA95A] flex items-center justify-center shadow-md shadow-[#D9A94D]/20">
                   <Truck size={20} className="text-white" />
                 </div>
                 <div>
@@ -185,12 +185,12 @@ export default function HeroSection() {
 
             {/* Floating card — Security badge */}
             <motion.div
-              className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-lg rounded-2xl p-3 shadow-xl shadow-primary-500/10 border border-sky-100"
+              className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-lg rounded-2xl p-3 shadow-xl shadow-[#D9A94D]/10 border border-[#D9A94D]/40"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-primary-600 flex items-center justify-center shadow-primary-tinted">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#D9A94D] to-[#DEA95A] flex items-center justify-center shadow-md shadow-[#D9A94D]/20">
                   <ShieldCheck size={17} className="text-white" />
                 </div>
                 <div>
@@ -213,7 +213,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.9 }}
         className="relative w-full mt-16 border-t border-sky-100 py-6 overflow-hidden bg-sky-50/70"
       >
-        <p className="text-center text-xs font-semibold text-sky-600 uppercase tracking-widest mb-4">
+        <p className="text-center text-xs font-bold text-[#D9A94D] uppercase tracking-widest mb-4">
           Trusted by fleet operators across India
         </p>
         <div className="overflow-hidden">

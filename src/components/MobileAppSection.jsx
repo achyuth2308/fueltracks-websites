@@ -78,7 +78,7 @@ export default function MobileAppSection() {
           {/* Content */}
           <div>
             <AnimatedSection>
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 border border-sky-200 text-accent-700 text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
                 Mobile App
               </span>
             </AnimatedSection>

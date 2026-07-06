@@ -42,7 +42,7 @@ export default function ServicesPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
           <AnimatedSection>
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sky-300 text-[10px] font-bold uppercase tracking-[0.2em] backdrop-blur-md">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-[10px] font-bold uppercase tracking-[0.2em] backdrop-blur-md">
               Our Services
             </span>
           </AnimatedSection>

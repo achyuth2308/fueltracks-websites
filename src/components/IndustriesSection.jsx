@@ -25,7 +25,7 @@ export default function IndustriesSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-surface-300 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-xs font-semibold uppercase tracking-wider">
               Industries We Serve
             </span>
           </AnimatedSection>

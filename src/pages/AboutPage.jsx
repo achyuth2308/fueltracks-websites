@@ -86,7 +86,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
           <div className="max-w-3xl flex flex-col items-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-semibold uppercase tracking-wider mb-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-sm font-semibold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-primary-600" />
               About Us
             </span>
