@@ -7,11 +7,11 @@
 // Flagship products get a massive alternating layout
 export const flagshipProducts = [
   {
-    id: "ft-gps-pro",
-    name: "FT GPS Pro Tracker",
-    badge: "Bestseller",
-    image: "/images/products/ft-gps-pro.webp",
-    description: "The ultimate industrial-grade GPS tracking device. Engineered with sub-10 second refresh rates, a massive backup battery, and robust anti-tamper mechanisms to keep your fleet visible 24/7 in India's toughest conditions.",
+    id: "vltd-4g-device",
+    name: "VLTD 4G Device",
+    badge: "Premium",
+    image: "/images/products/VLTD 4g device.jpeg",
+    description: "High-speed 4G tracking device with fallback support, ideal for real-time commercial fleet monitoring. Built for intense Indian conditions with robust casing.",
     specs: [
       { label: "Network", value: "4G LTE / 2G Fallback" },
       { label: "Battery", value: "48 Hours Backup" },
@@ -25,11 +25,11 @@ export const flagshipProducts = [
     ],
   },
   {
-    id: "ft-cfs-1000",
-    name: "FT-CFS 1000 Fuel Sensor",
-    badge: "Premium Accuracy",
-    image: "/images/products/ft-cfs-1000.webp",
-    description: "Stop fuel theft permanently. Our high-precision capacitive fuel sensor delivers incredibly accurate tank levels directly to your dashboard. Automatically detect minute drains, unauthorized siphoning, and verify every single refill.",
+    id: "capacitive-fuel-sensor",
+    name: "Capacitive Fuel Sensor",
+    badge: "High Accuracy",
+    image: "/images/products/fuel-sensor.png",
+    description: "Stop fuel theft permanently. Our high-precision capacitive fuel sensor delivers incredibly accurate tank levels directly to your dashboard. Verify every single refill.",
     specs: [
       { label: "Accuracy", value: "99.2% Precision" },
       { label: "Material", value: "Aviation-grade Aluminum" },
@@ -47,7 +47,7 @@ export const flagshipProducts = [
     name: "Fuel Tracks Cloud Suite",
     badge: "Enterprise Platform",
     image: "/images/products/ft-cloud-suite.webp",
-    description: "Your entire fleet operations unified in one powerful, blazing-fast dashboard. Monitor thousands of vehicles simultaneously, generate automated compliance reports, and visualize fuel theft with pinpoint accuracy.",
+    description: "Your entire fleet operations unified in one powerful, blazing-fast dashboard. Monitor thousands of vehicles simultaneously, generate automated compliance reports.",
     specs: [
       { label: "Uptime", value: "99.99% SLA" },
       { label: "Hosting", value: "AWS Secure Cloud" },
@@ -70,58 +70,25 @@ export const catalogCategories = [
     description: "Reliable tracking devices and dashcams for standard fleet requirements.",
     products: [
       {
-        id: "ais140-tracker",
-        name: "AIS 140 Certified Tracker",
-        badge: "RTO Approved",
-        image: "/images/products/ais140-back.webp",
-        description: "Govt. certified AIS 140 compliant GPS tracker with IRNSS support for commercial vehicles.",
+        id: "vltd-2g-device",
+        name: "VLTD 2G Device",
+        badge: "Bestseller",
+        image: "/images/products/VLTD 2G.jpeg",
+        description: "Reliable and cost-effective 2G tracking solution for standard logistics and compliance.",
         specs: [
           { label: "Compliance", value: "AIS-140 / CDAC" },
-          { label: "SOS", value: "Panic Button Ready" },
-        ],
-      },
-      {
-        id: "fleet-dashcam",
-        name: "HD Fleet Dashcam",
-        badge: "Driver Safety",
-        image: "/images/products/fleet-camera.png",
-        description: "High-definition fleet camera for continuous driver monitoring and incident recording.",
-        specs: [
-          { label: "Resolution", value: "1080p Full HD" },
-          { label: "Storage", value: "Up to 128GB SD" },
-        ],
-      },
-      {
-        id: "fttpl-device",
-        name: "FTTPL Standard Device",
-        badge: "Value Pick",
-        image: "/images/products/fttpl-gps-device.png",
-        description: "Highly reliable, cost-effective tracking device ideal for large-scale standard fleet deployment.",
-        specs: [
-          { label: "Installation", value: "Plug & Play 3-Wire" },
           { label: "Voltage", value: "9V-36V Supported" },
         ],
       },
       {
-        id: "compact-gps",
-        name: "Compact Tracker",
-        badge: "Discreet",
-        image: "/images/products/gps-device.png",
-        description: "Miniature GPS tracker designed for easy, hidden installation in 2-wheelers or light vehicles.",
+        id: "basic-gps-device",
+        name: "Basic GPS Device",
+        badge: "Compact",
+        image: "/images/products/basic device.jpeg",
+        description: "Compact and discreet tracker for 2-wheelers and light vehicles. Easy plug and play.",
         specs: [
+          { label: "Installation", value: "Plug & Play 3-Wire" },
           { label: "Size", value: "Ultra-compact Design" },
-          { label: "Alerts", value: "Anti-towing Alerts" },
-        ],
-      },
-      {
-        id: "capacitive-sensor",
-        name: "Capacitive Fuel Probe",
-        badge: "Heavy Duty",
-        image: "/images/products/fuel-sensor.png",
-        description: "Rugged fuel probe suitable for heavy duty trucks, mining equipment, and diesel generators.",
-        specs: [
-          { label: "Durability", value: "Industrial Grade" },
-          { label: "Output", value: "RS232 / Analog" },
         ],
       },
     ],
