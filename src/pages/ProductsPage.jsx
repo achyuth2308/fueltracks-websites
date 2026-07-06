@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
 import { flagshipProducts, catalogCategories } from "../data/productsData";
+import { Link } from "react-router-dom";
 import { Check, Shield, Cpu, Zap, Headphones, ArrowRight } from "lucide-react";
 
 const getBadgeStyles = (badge) => {
@@ -112,11 +113,14 @@ export default function ProductsPage() {
                       ))}
                     </ul>
 
-                    <div className="mt-10 flex gap-4">
-                      <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/20">
+                    <div className="mt-10 flex flex-wrap gap-4">
+                      <a href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/20">
                         Get a Quote
                         <ArrowRight size={16} />
                       </a>
+                      <Link to={`/products/${product.id}`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-100 text-surface-900 font-semibold hover:bg-surface-200 transition-colors shadow-sm">
+                        Get Info
+                      </Link>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -222,13 +226,16 @@ export default function ProductsPage() {
                         ))}
                       </div>
 
-                      <div className="mt-10">
+                      <div className="mt-10 flex flex-wrap gap-4">
                         <a href="/contact" className="group inline-flex items-center gap-4 px-6 py-3.5 rounded-full bg-surface-900 text-white font-medium hover:bg-surface-800 active:scale-[0.98] transition-all duration-500 shadow-xl shadow-surface-900/10">
-                          <span className="pl-2">Request Info</span>
+                          <span className="pl-2">Request Quote</span>
                           <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-all duration-500">
                             <ArrowRight size={14} />
                           </div>
                         </a>
+                        <Link to={`/products/${category.products[0].id}`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-surface-200 text-surface-900 font-semibold hover:bg-surface-50 transition-colors shadow-sm">
+                          Get Info
+                        </Link>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -271,10 +278,13 @@ export default function ProductsPage() {
                           ))}
                         </div>
 
-                        <div className="mt-6">
-                          <a href="/contact" className="block w-full text-center py-2.5 rounded-lg bg-surface-50 text-surface-900 font-semibold text-sm hover:bg-surface-100 transition-colors border border-surface-200">
-                            Request Info
+                        <div className="mt-6 grid grid-cols-2 gap-3">
+                          <a href="/contact" className="block w-full text-center py-2.5 rounded-lg bg-surface-900 text-white font-semibold text-sm hover:bg-surface-800 transition-colors shadow-md">
+                            Get Quote
                           </a>
+                          <Link to={`/products/${product.id}`} className="block w-full text-center py-2.5 rounded-lg bg-surface-50 text-surface-900 font-semibold text-sm hover:bg-surface-100 transition-colors border border-surface-200">
+                            Get Info
+                          </Link>
                         </div>
                       </div>
                     </div>
