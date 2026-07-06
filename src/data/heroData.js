@@ -11,7 +11,7 @@ export const hero = {
   description:
     "Track vehicles, monitor fuel and manage your entire fleet in real-time — built for India's toughest conditions.",
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Watch Demo", href: "#features" },
+  secondaryCta: { label: "Watch Demo", href: "#installation-video" },
   stats: [
     { value: "1000+", label: "Vehicles Tracked", icon: "truck" },
     { value: "500+", label: "Active Dealers", icon: "users" },

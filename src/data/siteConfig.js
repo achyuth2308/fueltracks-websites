@@ -43,8 +43,4 @@ export const navigation = {
     { label: "Industries", href: "/industries" },
     { label: "Contact", href: "/contact" },
   ],
-  cta: {
-    label: "Get a Demo",
-    href: "/contact",
-  },
 };

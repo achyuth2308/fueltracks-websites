@@ -86,12 +86,6 @@ export default function Navbar() {
               >
                 Live Login
               </a>
-              <Link
-                to={navigation.cta.href}
-                className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-surface-900 text-white text-sm font-semibold hover:bg-surface-800 transition-colors shadow-lg shadow-surface-900/20"
-              >
-                {navigation.cta.label}
-              </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="lg:hidden p-2 rounded-xl text-surface-700 hover:bg-surface-100 transition-colors"
@@ -140,12 +134,7 @@ export default function Navbar() {
                 >
                   Live Login
                 </a>
-                <Link
-                  to={navigation.cta.href}
-                  className="block w-full text-center px-5 py-3 rounded-xl bg-surface-900 text-white font-semibold"
-                >
-                  {navigation.cta.label}
-                </Link>
+
               </div>
             </div>
           </motion.div>

@@ -117,7 +117,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Installation Video Section */}
-        <div className="mt-32 lg:mt-40">
+        <div id="installation-video" className="mt-32 lg:mt-40">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <AnimatedSection>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D9A94D]/10 to-[#DEA95A]/10 border border-[#D9A94D]/20 text-[#D9A94D] text-[10px] font-bold uppercase tracking-[0.2em]">
