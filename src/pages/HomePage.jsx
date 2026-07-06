@@ -1,6 +1,7 @@
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
+import ProductsSection from "../components/ProductsSection";
 import FeaturesSection from "../components/FeaturesSection";
 import IndustriesSection from "../components/IndustriesSection";
 import MobileAppSection from "../components/MobileAppSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ProductsSection />
       <FeaturesSection />
       <IndustriesSection />
       <MobileAppSection />
