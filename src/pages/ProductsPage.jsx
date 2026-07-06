@@ -182,9 +182,61 @@ export default function ProductsPage() {
                 </div>
               </AnimatedSection>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.products.map((product, pIndex) => (
-                  <AnimatedSection key={product.id} delay={0.1 * pIndex}>
+              {category.products.length === 1 ? (
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                  {/* Left Side: Visual */}
+                  <AnimatedSection direction="right" className="lg:order-1 h-full">
+                    <div className="relative p-2 sm:p-3 rounded-[2.5rem] bg-surface-50 border border-surface-100 hover:bg-surface-100/50 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group h-full">
+                      <div className="relative rounded-[calc(2.5rem-0.75rem)] overflow-hidden bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,1)] ring-1 ring-black/[0.03] flex items-center justify-center p-8 sm:p-12 h-full min-h-[300px]">
+                        <span className="absolute top-5 left-5 inline-flex items-center px-3 py-1.5 rounded-full bg-white/90 border border-surface-200/50 text-surface-600 text-[10px] font-bold uppercase tracking-[0.2em] z-20 backdrop-blur-md shadow-sm">
+                          {category.products[0].badge}
+                        </span>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-surface-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                        <img 
+                          src={category.products[0].image} 
+                          alt={category.products[0].name} 
+                          className="w-full h-auto max-h-[350px] object-contain relative z-10 rounded-2xl group-hover:scale-[1.05] group-hover:-rotate-1 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] drop-shadow-xl"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                  
+                  {/* Right Side: Information */}
+                  <AnimatedSection direction="left" className="lg:order-2">
+                    <div className="max-w-lg">
+                      <h3 className="text-3xl sm:text-4xl font-bold text-surface-900 tracking-tight leading-[1.1]">
+                        {category.products[0].name}
+                      </h3>
+                      <p className="mt-6 text-lg text-surface-600 leading-relaxed">
+                        {category.products[0].description}
+                      </p>
+                      
+                      <div className="mt-8 grid grid-cols-2 gap-6">
+                        {category.products[0].specs.map((spec, i) => (
+                          <div key={i} className="relative group">
+                            <div className="absolute -inset-2 bg-surface-100 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                            <p className="text-[10px] font-bold text-surface-400 uppercase tracking-[0.15em]">{spec.label}</p>
+                            <p className="mt-2 text-sm font-semibold text-surface-900">{spec.value}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-10">
+                        <a href="/contact" className="group inline-flex items-center gap-4 px-6 py-3.5 rounded-full bg-surface-900 text-white font-medium hover:bg-surface-800 active:scale-[0.98] transition-all duration-500 shadow-xl shadow-surface-900/10">
+                          <span className="pl-2">Request Info</span>
+                          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-all duration-500">
+                            <ArrowRight size={14} />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.products.map((product, pIndex) => (
+                    <AnimatedSection key={product.id} delay={0.1 * pIndex}>
                     <div className="group h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-surface-200 shadow-lg shadow-surface-900/5 hover:shadow-xl hover:shadow-primary-900/10 hover:border-primary-200 transition-all duration-300">
 
                       {/* Image Header */}
@@ -229,6 +281,7 @@ export default function ProductsPage() {
                   </AnimatedSection>
                 ))}
               </div>
+              )}
             </div>
           ))}
         </div>

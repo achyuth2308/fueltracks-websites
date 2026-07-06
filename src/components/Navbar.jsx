@@ -36,15 +36,12 @@ export default function Navbar() {
         }`}>
           <div className="flex items-center justify-between h-12 lg:h-14">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow">
-                <Fuel size={18} className="text-white" />
-              </div>
-              <div>
-                <span className="font-bold text-lg text-surface-900 tracking-tight">
-                  {company.shortName}
-                </span>
-              </div>
+            <Link to="/" className="flex items-center gap-3 group">
+              <img 
+                src="/images/logo.webp" 
+                alt="Fuel Tracks" 
+                className="h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" 
+              />
             </Link>
 
             {/* Desktop Nav */}

@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { hero } from "../data/heroData";
+import { services } from "../data/servicesData";
 
 const iconMap = {
   truck: Truck,
@@ -19,16 +20,6 @@ const iconMap = {
   headphones: Headphones,
 };
 
-const trustedBrands = [
-  "RK Logistics",
-  "Reddy Transport",
-  "SafeKids Bus Services",
-  "Deccan Mining Co.",
-  "Vijay Carriers",
-  "Andhra Express",
-  "PrimeMove Fleet",
-  "GreenRoute Transport",
-];
 
 export default function HeroSection() {
   return (
@@ -206,7 +197,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Trusted-by marquee ticker — sky-blue strip */}
+      {/* Services marquee ticker — sky-blue strip */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -214,17 +205,17 @@ export default function HeroSection() {
         className="relative w-full mt-16 border-t border-sky-100 py-6 overflow-hidden bg-sky-50/70"
       >
         <p className="text-center text-xs font-bold text-[#D9A94D] uppercase tracking-widest mb-4">
-          Trusted by fleet operators across India
+          Services We Offer
         </p>
         <div className="overflow-hidden">
           <div className="marquee-track">
-            {[...trustedBrands, ...trustedBrands].map((brand, i) => (
+            {[...services, ...services].map((service, i) => (
               <span
                 key={i}
                 className="inline-flex items-center gap-2 px-8 text-sm font-semibold text-surface-500 whitespace-nowrap"
               >
                 <span className="w-1.5 h-1.5 bg-accent-400 rounded-full" />
-                {brand}
+                {service.title}
               </span>
             ))}
           </div>
