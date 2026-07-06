@@ -32,7 +32,7 @@ const trustedBrands = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-x-hidden">
       {/* Ocean Slate gradient mesh background */}
       <div className="absolute inset-0 gradient-mesh" />
 
@@ -150,12 +150,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            className="relative"
+            className="relative w-full lg:-mt-12 lg:-translate-y-4"
           >
             {/* Light blue ambient glow behind the image */}
-            <div className="absolute inset-0 bg-sky-200/30 rounded-3xl blur-2xl scale-105" />
+            <div className="absolute inset-0 bg-sky-300/20 rounded-3xl blur-3xl scale-110" />
 
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/8 bg-sky-50 flex items-center justify-center p-2 border border-sky-200/60">
+            {/* True glassmorphism container */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/10 bg-white/40 backdrop-blur-xl flex items-center justify-center p-2 border border-white/60 ring-1 ring-inset ring-white/50">
               <img
                 src="/images/livetrackingimage.png"
                 alt="FuelTracks Live Tracking App — real-time vehicle and fuel monitoring dashboard"

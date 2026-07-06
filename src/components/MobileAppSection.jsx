@@ -20,20 +20,27 @@ export default function MobileAppSection() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 opacity-60 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Phone mockup */}
+          {/* Phone mockup / Glass container */}
           <AnimatedSection direction="left">
             <div className="relative mx-auto max-w-sm">
-              {/* Phone frame */}
-              <div className="relative bg-surface-900 rounded-[3rem] p-3 shadow-2xl shadow-surface-900/20">
-                <div className="bg-white rounded-[2.4rem] overflow-hidden aspect-[9/19.5]">
-                  <img src="/images/trackingimage.png" alt="Mobile App Tracking" className="w-full h-full object-cover" />
-                </div>
+              {/* Ambient glow behind the image */}
+              <div className="absolute inset-0 bg-sky-300/20 rounded-3xl blur-3xl scale-110" />
+
+              {/* True glassmorphism container matching the Hero Section */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/10 bg-white/40 backdrop-blur-xl flex items-center justify-center p-2 border border-white/60 ring-1 ring-inset ring-white/50">
+                <img
+                  src="/images/mobilescrren.png"
+                  alt="FuelTracks Mobile App Screen"
+                  className="w-full h-auto object-cover rounded-2xl"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/5 pointer-events-none" />
               </div>
 
               {/* Floating notification — fuel alert */}
-              <div className="absolute -right-8 top-1/4 glass rounded-2xl p-3 shadow-xl animate-bounce" style={{ animationDuration: "3s" }}>
+              <div className="absolute -right-8 top-1/4 bg-white/70 backdrop-blur-xl rounded-2xl p-3 shadow-xl shadow-primary-900/5 border border-white/60 ring-1 ring-inset ring-white/50 animate-bounce" style={{ animationDuration: "3s" }}>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-red-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-red-500 flex items-center justify-center shadow-md shadow-red-500/20">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
                       <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
                       <path d="M13.73 21a2 2 0 0 1-3.46 0" />
@@ -48,12 +55,12 @@ export default function MobileAppSection() {
 
               {/* Second floating card — route achievement */}
               <motion.div
-                className="absolute -left-8 bottom-1/3 glass rounded-2xl p-3 shadow-xl border border-white/60"
+                className="absolute -left-8 bottom-1/3 bg-white/70 backdrop-blur-xl rounded-2xl p-3 shadow-xl shadow-primary-900/5 border border-white/60 ring-1 ring-inset ring-white/50"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-accent-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-accent-500 flex items-center justify-center shadow-md shadow-accent-500/20">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                       <polyline points="22 4 12 14.01 9 11.01" />
@@ -77,9 +84,9 @@ export default function MobileAppSection() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 leading-tight">
+              <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter text-surface-900 leading-[1.1]">
                 Your fleet,{" "}
-                <span className="text-gradient">in your pocket.</span>
+                <span className="text-gradient block">in your pocket.</span>
               </h2>
             </AnimatedSection>
 

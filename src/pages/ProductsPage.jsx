@@ -115,7 +115,7 @@ export default function ProductsPage() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-auto object-contain relative z-10 group-hover:scale-[1.03] transition-transform duration-500"
+                      className="w-full h-auto object-contain relative z-10 group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
                       loading="lazy"
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function ProductsPage() {
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-500 rounded-2xl"
                           loading="lazy"
                         />
                       </div>
