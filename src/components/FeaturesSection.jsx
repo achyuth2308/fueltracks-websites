@@ -11,7 +11,7 @@ export default function FeaturesSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-sky-100 border border-sky-200 text-primary-700 text-xs font-semibold uppercase tracking-wider">
               Premium Features
             </span>
           </AnimatedSection>
@@ -57,7 +57,7 @@ export default function FeaturesSection() {
                   <ul className="mt-6 space-y-3">
                     {feature.bullets.map((bullet) => (
                       <li key={bullet} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-accent-100 flex items-center justify-center shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
                           <Check size={12} className="text-accent-600" />
                         </div>
                         <span className="text-surface-700">{bullet}</span>

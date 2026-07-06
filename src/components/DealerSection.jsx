@@ -5,7 +5,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 export default function DealerSection() {
   return (
-    <section className="py-20 lg:py-32 bg-surface-50 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-sky-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl bg-gradient-to-br from-surface-900 via-surface-800 to-primary-900 p-8 sm:p-12 lg:p-16 overflow-hidden">
           {/* Background decorations */}
@@ -53,7 +53,7 @@ export default function DealerSection() {
                     href={dealerProgram.applyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-400 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-600 text-white font-semibold hover:bg-primary-700 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-primary-600/25"
                   >
                     Apply Now
                     <ExternalLink size={16} />
@@ -74,7 +74,7 @@ export default function DealerSection() {
               {dealerProgram.benefits.map((benefit, i) => (
                 <AnimatedSection key={benefit.title} delay={0.1 + i * 0.1}>
                   <div className="group flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500/20 to-accent-500/20 flex items-center justify-center shrink-0">
                       <DynamicIcon
                         name={benefit.icon}
                         size={20}

@@ -63,7 +63,7 @@ export default function IndustriesSection() {
                     <DynamicIcon
                       name={industry.icon}
                       size={22}
-                      className="text-accent-400"
+                      className="text-sky-300"
                     />
                   </div>
                 )}
