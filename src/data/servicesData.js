@@ -94,6 +94,12 @@ export const services = [
     icon: "Smartphone",
     image: "/images/homepagecards/mobileapptrcacking cardimage.png",
   },
+  {
+    title: "Dash Cam",
+    description: "Road-facing & driver-facing video telemetry for comprehensive fleet monitoring.",
+    icon: "Video",
+    image: "/images/homepagecards/dashcam_service.png",
+  },
 ];
 
 export const premiumFeatures = [

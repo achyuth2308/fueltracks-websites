@@ -13,6 +13,7 @@ import {
   Power,
   ShieldAlert,
   Smartphone,
+  Video,
   ArrowRight,
   Check
 } from "lucide-react";
@@ -29,6 +30,7 @@ const iconMap = {
   Power,
   ShieldAlert,
   Smartphone,
+  Video,
 };
 
 export default function ServicesPage() {
