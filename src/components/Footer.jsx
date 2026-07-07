@@ -131,17 +131,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                "GPS Tracking Systems",
-                "AIS-140 VLTD Devices",
-                "Fuel Level Sensors",
-                "Fleet Management",
-                "Dash Cameras",
-                "School Bus Tracking",
+                { label: "GPS Tracking Systems", href: "/services#live-gps-tracking" },
+                { label: "AIS-140 VLTD Devices", href: "/services#ais-140-vltd-devices" },
+                { label: "Fuel Level Sensors", href: "/services#fuel-level-sensors" },
+                { label: "Fleet Management", href: "/services#fleet-management" },
+                { label: "Dash Cameras", href: "/services#dash-cameras" },
+                { label: "School Bus Tracking", href: "/services#school-bus-tracking" },
               ].map((item) => (
-                <li key={item}>
-                  <span className="text-sm text-surface-400 hover:text-white transition-colors cursor-default">
-                    {item}
-                  </span>
+                <li key={item.label}>
+                  <Link
+                    to={item.href}
+                    className="text-sm text-surface-400 hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

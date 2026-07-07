@@ -27,8 +27,8 @@ export const socials = {
   playStore:
     "https://play.google.com/store/apps/details?id=com.app.gps.fueltracker&pcampaignid=web_share",
   // Add more as needed
-  // instagram: "",
-  // facebook: "",
+  instagram: "https://www.instagram.com/fueltracks.hyd",
+  facebook: "https://www.facebook.com/people/Fueltracks-Gps/pfbid027aW7toPEkm3WAotPXKJnXzPtoEfSfuoTrvndTrvwmTfvQ1vP37rBJBRyQozJWkf2l/?sk=about",
   // linkedin: "",
   // twitter: "",
 };

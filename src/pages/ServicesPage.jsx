@@ -78,6 +78,7 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.title}
+                  id={service.id}
                   className={`grid lg:grid-cols-2 gap-16 lg:gap-24 items-center`}
                 >
                   {/* Text Information */}
