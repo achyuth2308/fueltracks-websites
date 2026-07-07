@@ -130,16 +130,20 @@ export default function ProductsPage() {
                   direction={i % 2 === 0 ? "right" : "left"}
                   className={i % 2 === 1 ? "lg:order-1" : "lg:order-2"}
                 >
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/10 bg-surface-50 p-8 sm:p-12 border border-surface-200 group">
+                  <Link
+                    to={`/products/${product.id}`}
+                    className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/10 bg-surface-50 p-8 sm:p-12 border border-surface-200 group block cursor-pointer"
+                    aria-label={`View details for ${product.name}`}
+                  >
                     {/* Glow effect behind image */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary-400/10 to-accent-400/10 group-hover:scale-105 transition-transform duration-700 rounded-3xl" />
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-auto object-contain relative z-10 group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                      className="w-full h-auto object-contain relative z-10 group-hover:scale-[1.04] transition-transform duration-300 rounded-2xl"
                       loading="lazy"
                     />
-                  </div>
+                  </Link>
                 </AnimatedSection>
               </div>
             ))}
@@ -190,7 +194,11 @@ export default function ProductsPage() {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                   {/* Left Side: Visual */}
                   <AnimatedSection direction="right" className="lg:order-1 h-full">
-                    <div className="relative p-2 sm:p-3 rounded-[2.5rem] bg-surface-50 border border-surface-100 hover:bg-surface-100/50 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group h-full">
+                    <Link
+                      to={`/products/${category.products[0].id}`}
+                      className="relative p-2 sm:p-3 rounded-[2.5rem] bg-surface-50 border border-surface-100 hover:bg-surface-100/50 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group h-full block cursor-pointer"
+                      aria-label={`View details for ${category.products[0].name}`}
+                    >
                       <div className="relative rounded-[calc(2.5rem-0.75rem)] overflow-hidden bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,1)] ring-1 ring-black/[0.03] flex items-center justify-center p-8 sm:p-12 h-full min-h-[300px]">
                         <span className="absolute top-5 left-5 inline-flex items-center px-3 py-1.5 rounded-full bg-white/90 border border-surface-200/50 text-surface-600 text-[10px] font-bold uppercase tracking-[0.2em] z-20 backdrop-blur-md shadow-sm">
                           {category.products[0].badge}
@@ -199,11 +207,11 @@ export default function ProductsPage() {
                         <img 
                           src={category.products[0].image} 
                           alt={category.products[0].name} 
-                          className="w-full h-auto max-h-[350px] object-contain relative z-10 rounded-2xl group-hover:scale-[1.05] group-hover:-rotate-1 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] drop-shadow-xl"
+                          className="w-full h-auto max-h-[350px] object-contain relative z-10 rounded-2xl group-hover:scale-[1.04] transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] drop-shadow-xl"
                           loading="lazy"
                         />
                       </div>
-                    </div>
+                    </Link>
                   </AnimatedSection>
                   
                   {/* Right Side: Information */}
@@ -246,18 +254,22 @@ export default function ProductsPage() {
                     <AnimatedSection key={product.id} delay={0.1 * pIndex}>
                     <div className="group h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-surface-200 shadow-lg shadow-surface-900/5 hover:shadow-xl hover:shadow-primary-900/10 hover:border-primary-200 transition-all duration-300">
 
-                      {/* Image Header */}
-                      <div className="aspect-video bg-gradient-to-br from-surface-100 to-white p-6 flex items-center justify-center relative overflow-hidden border-b border-surface-100">
+                      {/* Image Header — clickable */}
+                      <Link
+                        to={`/products/${product.id}`}
+                        className="aspect-video bg-gradient-to-br from-surface-100 to-white p-6 flex items-center justify-center relative overflow-hidden border-b border-surface-100 block cursor-pointer"
+                        aria-label={`View details for ${product.name}`}
+                      >
                         <span className={`absolute top-4 left-4 inline-flex items-center px-2.5 py-1 rounded-md border text-[10px] font-bold uppercase tracking-wider z-20 backdrop-blur-md ${getBadgeStyles(product.badge)}`}>
                           {product.badge}
                         </span>
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-500 rounded-2xl"
+                          className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 rounded-2xl"
                           loading="lazy"
                         />
-                      </div>
+                      </Link>
 
                       {/* Content */}
                       <div className="p-6 flex-1 flex flex-col">

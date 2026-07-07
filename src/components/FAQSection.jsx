@@ -106,7 +106,7 @@ export default function FAQSection() {
                     Our team is available around the clock. Reach out and we'll respond within minutes.
                   </p>
                   <a
-                    href="https://wa.me/917997660442"
+                    href={`https://wa.me/917337433351?text=${encodeURIComponent("Hello Fuel Tracks Team,\n\nI would like to know more about your GPS Tracking and Fleet Management solutions.\n\nPlease share the product details, pricing, and installation process.\n\nThank you.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 w-full justify-center px-5 py-3 rounded-xl bg-white text-surface-900 font-semibold hover:bg-sky-50 active:scale-[0.98] transition-all duration-200 text-sm"

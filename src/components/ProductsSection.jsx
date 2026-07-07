@@ -1,27 +1,32 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import VideoEmbed from "./VideoEmbed";
 
 const hardwareProducts = [
   {
+    id: "vltd-4g-device",
     name: "VLTD 4G Device",
     description: "High-speed 4G tracking device with fallback support, ideal for real-time commercial fleet monitoring.",
-    image: "/images/products/VLTD 4g device.jpeg",
+    image: "/images/products/vltd-4g-device.png",
     badge: "Premium",
   },
   {
+    id: "vltd-2g-device",
     name: "VLTD 2G Device",
     description: "Reliable and cost-effective 2G tracking solution for standard logistics and compliance.",
-    image: "/images/products/VLTD 2G.jpeg",
+    image: "/images/products/vltd-2g-device.png",
     badge: "Bestseller",
   },
   {
+    id: "basic-gps-device",
     name: "Basic GPS Device",
     description: "Compact and discreet tracker for 2-wheelers and light vehicles. Easy plug and play.",
-    image: "/images/products/basic device.jpeg",
+    image: "/images/products/basic-gps-device.png",
     badge: "Compact",
   },
   {
+    id: "capacitive-fuel-sensor",
     name: "Capacitive Fuel Sensor",
     description: "High-precision fuel probe that detects minute drains and verifies every single refill.",
     image: "/images/products/fuel-sensor.png",
@@ -85,8 +90,13 @@ export default function ProductsSection() {
                 {/* Inner Core */}
                 <div className="h-full flex flex-col bg-white rounded-[calc(2rem-0.375rem)] overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,1)] ring-1 ring-black/[0.03]">
 
-                  {/* Image Area */}
-                  <div className="aspect-[4/3] bg-surface-50/30 p-6 flex items-center justify-center relative overflow-hidden group-hover:bg-sky-50/30 transition-colors duration-700">
+                  {/* Image Area — clickable, navigates to product detail */}
+                  <Link
+                    to={`/products/${product.id}`}
+                    className="aspect-[4/3] bg-surface-50/30 p-6 flex items-center justify-center relative overflow-hidden group-hover:bg-sky-50/30 transition-colors duration-700 cursor-pointer block"
+                    tabIndex={0}
+                    aria-label={`View details for ${product.name}`}
+                  >
                     <span className={`absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full border text-[10px] font-bold uppercase tracking-[0.15em] z-20 backdrop-blur-md shadow-sm ${getBadgeStyles(product.badge)}`}>
                       {product.badge}
                     </span>
@@ -99,7 +109,7 @@ export default function ProductsSection() {
                       className="w-full h-full object-contain relative z-10 group-hover:scale-[1.08] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] mix-blend-multiply"
                       loading="lazy"
                     />
-                  </div>
+                  </Link>
 
                   {/* Content Area */}
                   <div className="p-6 flex-1 flex flex-col">

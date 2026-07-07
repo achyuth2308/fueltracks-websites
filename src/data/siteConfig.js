@@ -23,9 +23,9 @@ export const company = {
 };
 
 export const socials = {
-  youtube: "https://www.youtube.com/channel/UCGk_EnGK2C7SfSPCvVQQ8LA",
+  youtube: "https://youtube.com/@fueltrackstechnologies?si=onzDRmsPAwJwkAkK",
   playStore:
-    "https://play.google.com/store/apps/details?id=com.app.gps.fueltracker",
+    "https://play.google.com/store/apps/details?id=com.app.gps.fueltracker&pcampaignid=web_share",
   // Add more as needed
   // instagram: "",
   // facebook: "",

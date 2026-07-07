@@ -9,7 +9,7 @@ export const flagshipProducts = [
     id: "vltd-4g-device",
     name: "VLTD 4G Device",
     badge: "Premium",
-    image: "/images/products/VLTD 4g device.jpeg",
+    image: "/images/products/vltd-4g-device.png",
     description: "High-speed 4G tracking device with fallback support, ideal for real-time commercial fleet monitoring. Built for intense Indian conditions with robust casing.",
     specs: [
       { label: "Network", value: "4G LTE / 2G Fallback" },
@@ -177,7 +177,7 @@ export const catalogCategories = [
         id: "vltd-2g-device",
         name: "VLTD 2G Device",
         badge: "Bestseller",
-        image: "/images/products/VLTD 2G.jpeg",
+        image: "/images/products/vltd-2g-device.png",
         description: "Reliable and cost-effective 2G tracking solution for standard logistics and compliance. Perfect for fleets operating in strong network zones.",
         specs: [
           { label: "Compliance", value: "AIS-140 / CDAC" },
@@ -223,7 +223,7 @@ export const catalogCategories = [
         id: "basic-gps-device",
         name: "Basic GPS Device",
         badge: "Compact",
-        image: "/images/products/basic device.jpeg",
+        image: "/images/products/basic-gps-device.png",
         description: "Compact and discreet tracker for 2-wheelers and light vehicles. Easy plug and play installation with essential live tracking features.",
         specs: [
           { label: "Installation", value: "Plug & Play 3-Wire" },

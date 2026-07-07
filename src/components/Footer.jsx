@@ -35,7 +35,7 @@ export default function Footer() {
                 <ExternalLink size={16} />
               </Link>
               <a
-                href={`https://wa.me/${company.whatsapp2}`}
+                href={`https://wa.me/${company.whatsapp2}?text=${encodeURIComponent("Hello Fuel Tracks Team,\n\nI would like to know more about your GPS Tracking and Fleet Management solutions.\n\nPlease share the product details, pricing, and installation process.\n\nThank you.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-600 text-white font-semibold hover:bg-accent-500 transition-colors"
