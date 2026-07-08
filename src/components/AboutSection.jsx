@@ -24,8 +24,9 @@ export default function AboutSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary-900/6">
                 <img
                   src="/images/fuelsensor.png"
-                  alt="Fuel sensor device used by FuelTracks for precision fleet monitoring"
-                  className="w-full h-full object-cover"
+                  alt="FuelTracks Fuel Level Sensor BLEYC device for precision fleet fuel monitoring"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/8 to-transparent pointer-events-none" />
               </div>
