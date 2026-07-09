@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Download, FileSpreadsheet, FileText, CheckCircle2, AlertTriangle, Loader2, Calendar,
 } from "lucide-react";
-import { supabase, isSupabaseReady } from "../../lib/supabaseClient";
+import { supabase, isSupabaseReady, supabaseValidationError } from "../../lib/supabaseClient";
 import { formatMobileForDisplay } from "../../utils/mobile";
 
 function formatDateDisplay(dateStr) {
@@ -146,7 +146,7 @@ export default function ExportData() {
       {!isSupabaseReady && (
         <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 text-sm font-medium">
           <AlertTriangle size={16} className="shrink-0" />
-          Supabase not configured. Export will be empty until credentials are added.
+          {supabaseValidationError || "Supabase not configured. Export will be empty until credentials are added."}
         </div>
       )}
 

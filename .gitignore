@@ -27,5 +27,8 @@ dist-ssr
 .wrangler
 .dev.vars*
 !.dev.vars.example
+.env
+.env.local
+.env.production
 .env*
 !.env.example

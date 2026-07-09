@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Users, Calendar, UserPlus, ArrowRight, Activity, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-import { supabase, isSupabaseReady } from "../../lib/supabaseClient";
+import { supabase, isSupabaseReady, supabaseValidationError } from "../../lib/supabaseClient";
 import { formatMobileForDisplay } from "../../utils/mobile";
 import StatCard from "../components/StatCard";
 
@@ -215,7 +215,7 @@ export default function DashboardHome() {
                   <td colSpan={3} className="px-5 py-12 text-center text-surface-400 text-sm">
                     No registrations yet.{" "}
                     {!isSupabaseReady && (
-                      <span className="text-amber-600 font-medium">Configure Supabase to see data.</span>
+                      <span className="text-amber-600 font-medium">{supabaseValidationError || "Configure Supabase to see data."}</span>
                     )}
                   </td>
                 </tr>

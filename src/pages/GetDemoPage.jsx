@@ -7,7 +7,7 @@ import {
   Smartphone, Check, AlertCircle, Loader2, Mail,
 } from "lucide-react";
 import bcrypt from "bcryptjs";
-import { supabase, isSupabaseReady } from "../lib/supabaseClient";
+import { supabase, isSupabaseReady, supabaseValidationError } from "../lib/supabaseClient";
 import { normalizeMobile, validateMobile } from "../utils/mobile";
 
 /* ─────────────── Helpers ─────────────── */
@@ -191,7 +191,7 @@ export default function GetDemoPage() {
 
     // Guard: Supabase not yet configured
     if (!isSupabaseReady) {
-      setServerError("Supabase is not configured. Add your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to the .env file and restart the dev server.");
+      setServerError(supabaseValidationError || "Supabase is not configured. Add your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to your environment variables.");
       setStatus("error");
       return;
     }

@@ -4,7 +4,7 @@ import {
   Search, Filter, SortDesc, Eye, Trash2, RefreshCw,
   ChevronDown, AlertTriangle,
 } from "lucide-react";
-import { supabase, isSupabaseReady } from "../../lib/supabaseClient";
+import { supabase, isSupabaseReady, supabaseValidationError } from "../../lib/supabaseClient";
 import { normalizeMobile, formatMobileForDisplay } from "../../utils/mobile";
 import SkeletonRow from "../components/SkeletonRow";
 import Pagination from "../components/Pagination";
@@ -170,7 +170,7 @@ export default function Registrations() {
       {!isSupabaseReady && (
         <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 text-sm font-medium">
           <AlertTriangle size={16} className="shrink-0" />
-          Supabase is not configured. Add your credentials to .env to see data.
+          {supabaseValidationError || "Supabase is not configured. Add your credentials to environment variables to see data."}
         </div>
       )}
 
