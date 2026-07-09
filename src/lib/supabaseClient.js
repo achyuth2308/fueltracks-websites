@@ -9,6 +9,9 @@ const isConfigured =
   supabaseUrl.startsWith("http") &&
   !supabaseUrl.includes("placeholder");
 
+console.log(supabaseUrl ? "Supabase URL Loaded ✓" : "Supabase URL Missing");
+console.log(supabaseAnonKey ? "Anon Key Loaded ✓" : "Anon Key Missing");
+
 if (!isConfigured) {
   console.warn(
     "[FuelTracks] Supabase not configured.\n" +
