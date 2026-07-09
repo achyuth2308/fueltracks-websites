@@ -9,8 +9,9 @@ const isConfigured =
   supabaseUrl.startsWith("http") &&
   !supabaseUrl.includes("placeholder");
 
-console.log(supabaseUrl ? "Supabase URL Loaded ✓" : "Supabase URL Missing");
-console.log(supabaseAnonKey ? "Anon Key Loaded ✓" : "Anon Key Missing");
+console.log("MODE:", import.meta.env.MODE)
+console.log("URL:", import.meta.env.VITE_SUPABASE_URL)
+console.log("KEY:", !!import.meta.env.VITE_SUPABASE_ANON_KEY)
 
 if (!isConfigured) {
   console.warn(
