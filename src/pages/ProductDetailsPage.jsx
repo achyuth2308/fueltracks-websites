@@ -60,7 +60,7 @@ export default function ProductDetailsPage() {
                   </p>
                   <div className="mt-10 flex gap-4">
                     <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary-600 text-white font-bold hover:bg-primary-700 transition-all hover:-translate-y-1 shadow-xl shadow-primary-500/25 group">
-                      Get a Quote
+                      More Details
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>

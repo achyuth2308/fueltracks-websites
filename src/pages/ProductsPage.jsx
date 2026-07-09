@@ -115,11 +115,11 @@ export default function ProductsPage() {
 
                     <div className="mt-10 flex flex-wrap gap-4">
                       <a href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/20">
-                        Get a Quote
+                        More Details
                         <ArrowRight size={16} />
                       </a>
                       <Link to={`/products/${product.id}`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-100 text-surface-900 font-semibold hover:bg-surface-200 transition-colors shadow-sm">
-                        Get Info
+                        Get Details
                       </Link>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ export default function ProductsPage() {
                           </div>
                         </a>
                         <Link to={`/products/${category.products[0].id}`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-surface-200 text-surface-900 font-semibold hover:bg-surface-50 transition-colors shadow-sm">
-                          Get Info
+                          Get Details
                         </Link>
                       </div>
                     </div>
@@ -295,7 +295,7 @@ export default function ProductsPage() {
                             Get Quote
                           </a>
                           <Link to={`/products/${product.id}`} className="block w-full text-center py-2.5 rounded-lg bg-surface-50 text-surface-900 font-semibold text-sm hover:bg-surface-100 transition-colors border border-surface-200">
-                            Get Info
+                            Get Details
                           </Link>
                         </div>
                       </div>

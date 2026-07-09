@@ -83,6 +83,13 @@ export default function Navbar() {
               >
                 Live Login
               </a>
+              {/* Get App Demo — primary CTA */}
+              <Link
+                to="/get-demo"
+                className="hidden lg:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary-600 text-white text-sm font-semibold hover:bg-primary-500 active:scale-[0.97] transition-all duration-200 shadow-md shadow-primary-600/20"
+              >
+                Get App Demo
+              </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="lg:hidden p-2 rounded-xl text-surface-700 hover:bg-surface-100 transition-colors"
@@ -115,6 +122,13 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-4 flex flex-col gap-2">
+                {/* Get App Demo — mobile primary CTA */}
+                <Link
+                  to="/get-demo"
+                  className="block w-full text-center px-5 py-3.5 rounded-xl bg-primary-600 text-white font-bold hover:bg-primary-500 transition-colors shadow-lg shadow-primary-600/20"
+                >
+                  Get App Demo
+                </Link>
                 <a
                   href="https://admin.fueltracks.in/login"
                   target="_blank"
@@ -131,7 +145,6 @@ export default function Navbar() {
                 >
                   Live Login
                 </a>
-
               </div>
             </div>
           </motion.div>
