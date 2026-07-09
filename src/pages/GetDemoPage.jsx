@@ -248,6 +248,8 @@ export default function GetDemoPage() {
         // 3a. UPDATE existing record
         const updateData = {
           full_name: form.fullName.trim(),
+          email: normalizedEmail,
+          mobile_number: normalizedMobile,
           password_hash: passwordHash,
           updated_at: now,
         };

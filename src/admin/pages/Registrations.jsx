@@ -314,7 +314,7 @@ export default function Registrations() {
                         </div>
                       </td>
                       <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">{formatMobileForDisplay(user.mobile_number)}</td>
-                      <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">{user.email || "—"}</td>
+                      <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">{user.email || "No Email"}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-700 font-semibold">{user.registration_count || 1}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-700 font-semibold">{todaysCount}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">

@@ -34,7 +34,7 @@ function flattenRecord(r) {
   return {
     "Full Name": r.full_name || "",
     "Mobile Number": formatMobileForDisplay(r.mobile_number),
-    "Email Address": r.email || "",
+    "Email Address": r.email || "No Email",
     "Total Attempts": r.registration_count || 1,
     "Today's Attempts": todaysCount,
     "First Registered": `${first.date} ${first.time}`,
@@ -290,7 +290,7 @@ export default function ExportData() {
                     <tr key={r.id} className="border-b border-surface-50 hover:bg-surface-50 transition-colors">
                       <td className="px-4 py-3 font-semibold text-surface-800">{r.full_name}</td>
                       <td className="px-4 py-3 text-surface-600">{formatMobileForDisplay(r.mobile_number)}</td>
-                      <td className="px-4 py-3 text-surface-600">{r.email || "—"}</td>
+                      <td className="px-4 py-3 text-surface-600">{r.email || "No Email"}</td>
                       <td className="px-4 py-3 text-surface-600">{date}</td>
                       <td className="px-4 py-3 text-surface-600">{time}</td>
                     </tr>
