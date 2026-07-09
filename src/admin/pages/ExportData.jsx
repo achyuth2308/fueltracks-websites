@@ -34,10 +34,11 @@ function flattenRecord(r) {
   return {
     "Full Name": r.full_name || "",
     "Mobile Number": formatMobileForDisplay(r.mobile_number),
-    "Total Registration Count": r.registration_count || 1,
-    "Today's Registration Count": todaysCount,
-    "First Registration Date": `${first.date} ${first.time}`,
-    "Last Registration Date": `${last.date} ${last.time}`,
+    "Email Address": r.email || "",
+    "Total Attempts": r.registration_count || 1,
+    "Today's Attempts": todaysCount,
+    "First Registered": `${first.date} ${first.time}`,
+    "Last Registered": `${last.date} ${last.time}`,
   };
 }
 
@@ -119,7 +120,7 @@ export default function ExportData() {
 
       // Style header row width
       ws["!cols"] = [
-        { wch: 25 }, { wch: 18 }, { wch: 20 }, { wch: 26 }, { wch: 26 },
+        { wch: 25 }, { wch: 18 }, { wch: 28 }, { wch: 18 }, { wch: 18 }, { wch: 26 }, { wch: 26 },
       ];
 
       const wb = utils.book_new();
@@ -206,7 +207,7 @@ export default function ExportData() {
         <div>
           <p className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-2">Export Columns</p>
           <div className="flex flex-wrap gap-2">
-            {["Full Name", "Mobile Number", "Registration Count", "First Registration Date", "Last Registration Date"].map((col) => (
+            {["Full Name", "Mobile Number", "Email Address", "Total Attempts", "Today's Attempts", "First Registered", "Last Registered"].map((col) => (
               <span key={col} className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-50 border border-surface-200 text-xs font-semibold text-surface-600">
                 <CheckCircle2 size={11} className="text-emerald-500" />
                 {col}
@@ -277,7 +278,7 @@ export default function ExportData() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-surface-100 bg-surface-50">
-                  {["Full Name", "Mobile Number", "Date", "Time"].map((h) => (
+                  {["Full Name", "Mobile Number", "Email Address", "Date", "Time"].map((h) => (
                     <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-surface-400 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
@@ -289,6 +290,7 @@ export default function ExportData() {
                     <tr key={r.id} className="border-b border-surface-50 hover:bg-surface-50 transition-colors">
                       <td className="px-4 py-3 font-semibold text-surface-800">{r.full_name}</td>
                       <td className="px-4 py-3 text-surface-600">{formatMobileForDisplay(r.mobile_number)}</td>
+                      <td className="px-4 py-3 text-surface-600">{r.email || "—"}</td>
                       <td className="px-4 py-3 text-surface-600">{date}</td>
                       <td className="px-4 py-3 text-surface-600">{time}</td>
                     </tr>

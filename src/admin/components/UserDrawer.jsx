@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, User, Phone, Calendar, Clock, Hash, Lock } from "lucide-react";
+import { X, User, Phone, Calendar, Clock, Hash, Lock, Mail } from "lucide-react";
 import { formatMobileForDisplay } from "../../utils/mobile";
 
 function Field({ icon: Icon, label, value }) {
@@ -74,6 +74,7 @@ export default function UserDrawer({ user, onClose }) {
                 <div>
                   <p className="font-bold text-surface-900">{user.full_name}</p>
                   <p className="text-sm text-surface-500">{formatMobileForDisplay(user.mobile_number)}</p>
+                  <p className="text-xs text-surface-400 mt-0.5">{user.email || "—"}</p>
                 </div>
               </div>
 
@@ -81,6 +82,7 @@ export default function UserDrawer({ user, onClose }) {
                 <Field icon={Hash} label="Registration ID" value={`#${user.id?.toString().slice(0, 8).toUpperCase()}`} />
                 <Field icon={User} label="Full Name" value={user.full_name} />
                 <Field icon={Phone} label="Mobile Number" value={formatMobileForDisplay(user.mobile_number)} />
+                <Field icon={Mail} label="Email Address" value={user.email} />
                 <Field icon={Hash} label="Total Registration Count (Lifetime)" value={user.registration_count || 1} />
                 <Field
                   icon={Hash}

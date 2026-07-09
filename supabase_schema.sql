@@ -16,13 +16,21 @@ ADD COLUMN IF NOT EXISTS first_registered_at TIMESTAMP WITH TIME ZONE DEFAULT NO
 ALTER TABLE demo_users 
 ADD COLUMN IF NOT EXISTS last_registered_at TIMESTAMP WITH TIME ZONE DEFAULT NOW();
 
+ALTER TABLE demo_users 
+ADD COLUMN IF NOT EXISTS email TEXT;
+
 -- 2. Backfill existing records to set sensible default values
 UPDATE demo_users 
 SET 
   first_registered_at = COALESCE(first_registered_at, created_at, NOW()),
   last_registered_at = COALESCE(last_registered_at, updated_at, created_at, NOW()),
   registration_count = COALESCE(registration_count, 1),
-  daily_registration_count = COALESCE(daily_registration_count, 1);
+  daily_registration_count = COALESCE(daily_registration_count, 1),
+  email = COALESCE(email, LOWER(REPLACE(full_name, ' ', '')) || '@fueltracks.com');
+
+-- 3. Set NOT NULL constraint on email column after backfilling
+ALTER TABLE demo_users 
+ALTER COLUMN email SET NOT NULL;
 
 -- 3. Row Level Security (RLS) configuration:
 -- If RLS is enabled on 'demo_users', we must allow anonymous (public) selects, inserts, and updates.

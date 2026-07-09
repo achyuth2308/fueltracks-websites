@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   Eye, EyeOff, User, Phone, Lock, ArrowRight,
   CheckCircle2, Shield, Zap, Clock,
-  Smartphone, Check, AlertCircle, Loader2,
+  Smartphone, Check, AlertCircle, Loader2, Mail,
 } from "lucide-react";
 import bcrypt from "bcryptjs";
 import { supabase, isSupabaseReady } from "../lib/supabaseClient";
@@ -32,6 +32,14 @@ function validateFullName(v) {
   if (v.trim().length < 3) return "Name must be at least 3 characters.";
   if (v.trim().length > 50) return "Name cannot exceed 50 characters.";
   if (!/^[A-Za-z\s]+$/.test(v.trim())) return "Only alphabetic characters and spaces allowed.";
+  return "";
+}
+
+function validateEmail(v) {
+  if (!v || !v.trim()) return "Email address is required.";
+  const trimmed = v.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(trimmed)) return "Please enter a valid email address.";
   return "";
 }
 
@@ -142,7 +150,7 @@ function PasswordStrengthBar({ password }) {
 /* ─────────────── Main Page ─────────────── */
 export default function GetDemoPage() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ fullName: "", mobile: "", password: "" });
+  const [form, setForm] = useState({ fullName: "", mobile: "", email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -154,28 +162,29 @@ export default function GetDemoPage() {
     setForm((prev) => ({ ...prev, [field]: value }));
     // Live-validate touched fields
     if (touched[field]) {
-      const validator = { fullName: validateFullName, mobile: validateMobile, password: validatePassword }[field];
+      const validator = { fullName: validateFullName, mobile: validateMobile, email: validateEmail, password: validatePassword }[field];
       setErrors((prev) => ({ ...prev, [field]: validator(value) }));
     }
   }, [touched]);
 
   const handleBlur = useCallback((field) => () => {
     setTouched((prev) => ({ ...prev, [field]: true }));
-    const validator = { fullName: validateFullName, mobile: validateMobile, password: validatePassword }[field];
+    const validator = { fullName: validateFullName, mobile: validateMobile, email: validateEmail, password: validatePassword }[field];
     setErrors((prev) => ({ ...prev, [field]: validator(form[field]) }));
   }, [form]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Touch all fields
-    setTouched({ fullName: true, mobile: true, password: true });
+    setTouched({ fullName: true, mobile: true, email: true, password: true });
 
     const nameErr = validateFullName(form.fullName);
     const mobileErr = validateMobile(form.mobile);
+    const emailErr = validateEmail(form.email);
     const passErr = validatePassword(form.password);
-    setErrors({ fullName: nameErr, mobile: mobileErr, password: passErr });
+    setErrors({ fullName: nameErr, mobile: mobileErr, email: emailErr, password: passErr });
 
-    if (nameErr || mobileErr || passErr) return;
+    if (nameErr || mobileErr || emailErr || passErr) return;
 
     setStatus("loading");
     setServerError("");
@@ -192,18 +201,20 @@ export default function GetDemoPage() {
       console.log("Searching existing user...");
       
       const normalizedMobile = normalizeMobile(form.mobile);
+      const normalizedEmail = form.email.trim().toLowerCase();
 
-      // 1. Search database using Mobile Number
-      const { data: existing, error: checkErr } = await supabase
+      // Search database using Mobile Number OR Email Address
+      const { data: existingList, error: checkErr } = await supabase
         .from("demo_users")
         .select("*")
-        .eq("mobile_number", normalizedMobile)
-        .maybeSingle();
+        .or(`mobile_number.eq.${normalizedMobile},email.eq.${normalizedEmail}`);
 
       if (checkErr) {
         console.error("Supabase Error (Searching user):", checkErr);
         throw checkErr;
       }
+
+      const existing = existingList && existingList.length > 0 ? existingList[0] : null;
 
       // 2. Hash password
       const salt = await bcrypt.genSalt(10);
@@ -272,6 +283,7 @@ export default function GetDemoPage() {
         const insertData = {
           full_name: form.fullName.trim(),
           mobile_number: normalizedMobile,
+          email: normalizedEmail,
           password_hash: passwordHash,
           demo_access: false,
           created_at: now,
@@ -314,7 +326,7 @@ export default function GetDemoPage() {
   };
 
   const resetForm = () => {
-    setForm({ fullName: "", mobile: "", password: "" });
+    setForm({ fullName: "", mobile: "", email: "", password: "" });
     setErrors({});
     setTouched({});
     setStatus("idle");
@@ -450,6 +462,20 @@ export default function GetDemoPage() {
                             placeholder="10-digit Indian mobile number"
                             icon={Phone}
                             autoComplete="tel"
+                          />
+
+                          {/* Email Address */}
+                          <FormField
+                            id="demo-email"
+                            label="Email Address"
+                            type="email"
+                            value={form.email}
+                            onChange={handleChange("email")}
+                            onBlur={handleBlur("email")}
+                            error={errors.email}
+                            placeholder="Enter your email address"
+                            icon={Mail}
+                            autoComplete="email"
                           />
 
                           {/* Password */}

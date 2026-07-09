@@ -98,7 +98,8 @@ export default function Registrations() {
         const mobileMatch = r.mobile_number?.includes(q) ||
                             (normalizedQ && r.mobile_number?.includes(normalizedQ)) ||
                             (r.mobile_number && normalizeMobile(r.mobile_number).includes(q));
-        return fullNameMatch || mobileMatch;
+        const emailMatch = r.email?.toLowerCase().includes(q);
+        return fullNameMatch || mobileMatch || emailMatch;
       });
     }
 
@@ -256,7 +257,7 @@ export default function Registrations() {
           <table className="w-full min-w-[800px]">
             <thead>
               <tr className="border-b border-surface-100 bg-surface-50/70">
-                {["#", "Full Name", "Mobile Number", "Total Count", "Today's Count", "First Registered", "Last Registered", "Last Time", "Actions"].map((h) => (
+                {["#", "Full Name", "Mobile Number", "Email Address", "Total Count", "Today's Count", "First Registered", "Last Registered", "Last Time", "Actions"].map((h) => (
                   <th key={h} className="px-5 py-3.5 text-left text-[11px] font-bold text-surface-400 uppercase tracking-wider whitespace-nowrap">
                     {h}
                   </th>
@@ -265,10 +266,10 @@ export default function Registrations() {
             </thead>
             <tbody>
               {loading ? (
-                Array.from({ length: perPage }).map((_, i) => <SkeletonRow key={i} cols={9} />)
+                Array.from({ length: perPage }).map((_, i) => <SkeletonRow key={i} cols={10} />)
               ) : paginated.length === 0 ? (
                 <tr>
-                  <td colSpan={9} className="px-5 py-16 text-center">
+                  <td colSpan={10} className="px-5 py-16 text-center">
                     <div className="flex flex-col items-center gap-2">
                       <Filter size={28} className="text-surface-200" />
                       <p className="text-surface-400 font-medium text-sm">No registrations found</p>
@@ -313,6 +314,7 @@ export default function Registrations() {
                         </div>
                       </td>
                       <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">{formatMobileForDisplay(user.mobile_number)}</td>
+                      <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">{user.email || "—"}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-700 font-semibold">{user.registration_count || 1}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-700 font-semibold">{todaysCount}</td>
                       <td className="px-5 py-3.5 text-sm text-surface-600 font-medium">
